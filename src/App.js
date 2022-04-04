@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="movie-details">
+        <div class="movie-details-container">
+          <div class="text-details">
+            <div class="movie-info">
+              <div class="movie-name">
+                <h1><a>RRR</a></h1>
+                <div class="ua-icon">
+                    <img src={require('./image/ua_icon.png')}></img>
+                    <span class="heart-rating">
+                      <span class="heart-icon">
+                        <img src={require('./image/heart.png')}></img>
+                      </span>
+                      <span class="percentage">90 %</span>
+                      <br/>
+                      <span class="votes">622134 VOTES</span>
+                    </span>
+                    <span class="tags">
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">Drama</span>
+                    <span class="genre-tag">Historical</span>
+                    <span class="genre-tag">Period</span>
+                    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }
