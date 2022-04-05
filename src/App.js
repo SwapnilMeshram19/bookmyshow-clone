@@ -1,5 +1,5 @@
 import "./App.css";
-import { CarouselSection } from "./Components/Homepage/CarouselSection";
+import { Homepage } from "./Components/Homepage/Homepage";
 // import Footer from "./Routes/Footer";
 import Navbar from "./Components/Navbar";
 // import Router from "./Routes/Router";
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <CarouselSection />
+      <Homepage />
       {/* <Router />
       <Footer /> */}
 
