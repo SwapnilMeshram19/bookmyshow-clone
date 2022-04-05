@@ -1,9 +1,17 @@
-import './App.css';
+import "./App.css";
+import { CarouselSection } from "./Components/Homepage/CarouselSection";
+// import Footer from "./Routes/Footer";
+import Navbar from "./Components/Navbar";
+// import Router from "./Routes/Router";
 
 function App() {
   return (
-    <div>
-      <h1>Hello, World!</h1>
+    <div className="App">
+      <Navbar />
+      <CarouselSection />
+      {/* <Router />
+      <Footer /> */}
+
     </div>
   );
 }
