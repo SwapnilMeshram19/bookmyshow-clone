@@ -87,6 +87,22 @@ const handleClick =(posti)=>{
         <button onClick={()=>punjabi()}>Punjabi</button>      
         <button onClick={()=>marathi()}>Marathi</button> 
         </div>
+
+        <div className='btn'>
+         <p style={{margin: "0px" , marginLeft: "15px" , display: "inline-block" ,marginRight: "120px"} }>Languages</p>
+        {/* <button onClick={()=>showAll()}>Show All</button> */}
+        <div onClick={()=> showAll()} style={{display: "inline-block"}} >Clear</div>
+        <button onClick={()=>hindi()}>Hindi </button>
+        <button onClick={()=>english()}>English</button>
+        <button onClick={()=>telegue()}>Telugue</button>
+        <button onClick={()=>tamil()}>Tamil</button>
+        <button onClick={()=>punjabi()}>Punjabi</button>      
+        <button onClick={()=>marathi()}>Marathi</button> 
+        </div>
+
+
+
+
         </div> 
         <div className='product'>
 
