@@ -5,6 +5,7 @@ const Navbar = () => {
     <div>
 
 <Link to='/movie'>Navbar</Link>
+<Link to='/moviedata'></Link>
 
 navbar
     </div>

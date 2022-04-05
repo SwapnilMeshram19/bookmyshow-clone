@@ -1,0 +1,9 @@
+.cast{
+    display: flex;
+    text-align: center;
+    gap: 35px;
+}
+.cast div img {
+    width: 130px;
+    border-radius: 50%;
+}
