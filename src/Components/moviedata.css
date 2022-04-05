@@ -7,3 +7,34 @@
     width: 130px;
     border-radius: 50%;
 }
+
+.background img{
+    width: 100%;
+    height: 500px;
+   
+}
+
+.upperimg img{
+    position: absolute;
+    top: 60px;
+    left: 170px;
+    width: 245px;
+    border-radius: 20px;
+
+}
+.uppertext{
+    position: absolute;
+    top: 70px;
+    left: 450px;
+}
+.add{
+    display: flex;
+    margin-top: 20px;
+    color: white;
+    padding: 10px;
+    background-color: rgb(83, 80, 80);
+    border-radius: 10px;
+}
+.addyour{
+    margin-right: 80px;
+}

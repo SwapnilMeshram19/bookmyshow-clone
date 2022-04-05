@@ -35,13 +35,16 @@ padding: 4px;
 padding-left: 6px;
 padding-right: 6px;
   margin: 10px;
+  color: rgba(202, 33, 33, 0.81);
+  background-color: white;
+  border: 1px solid gray;
 }
 .product button{
   border-radius: 30px;
   padding: 6px;
   padding-left: 10px;
   padding-right: 10px;
-  color: red;
+  color: rgba(202, 33, 33, 0.81);
   background-color: white;
   border: 1px solid gray;
   margin-right: 10px;

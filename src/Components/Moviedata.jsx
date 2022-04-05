@@ -42,13 +42,37 @@ const getData =()=>{
 
 
 
+
+<div className='background'>
+<img src={item.backgroundimg} alt="" />
+</div>
+
+<div className='upperimg'>
+
 <img src={item.poster} alt="" />
+<div className='uppertext'>
+<h2 style={{color: "white"}}>{item.title}</h2>
+<h3 style={{color: "white",display: "inline-block", margin: "0px", marginTop: "0px"}}> <span style={{color: "red"}}>&#10084;</span> 90% <h5 style={{color: "white", display: "inline-block",margin: "0px" }}> 642.6K rating</h5>   </h3>
+<div className='add'> 
+  <div className='addyour'>
+  <h3 style={{display: "inline-block", margin: "0px"}}>Add your rating & review</h3><br /><span>Your rating matter</span>
+ </div >
+ <button style={{width: "90px", height: "35px" , borderRadius: "10px" ,marginTop: "10px"}}>Rate now</button>
+ </div>
+ <div style={{backgroundColor: "whitesmoke" , display: "inline-block" ,marginTop: "25px" , padding: "7px" , borderRadius: "5px"}}><h4 style={{margin: "0px"}}>2D, 3D, IMAX 3D, IMAX 2D</h4></div>
 
 
 
 
-        {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfzPSk3beNwfqsK5mQmHND8bozEMNYAT1WlA&usqp=CAU" alt="" /> */}
-{/* <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQUIOnAM9hT0-_XB39o_3j6wTeaQdTSDNweyJLTY9HvdQSak7e_" alt="" /> */}
+
+
+</div>
+</div>
+
+
+
+
+
 <div className='about'>
   <h2>About the movie</h2>
   <p>RRR is a period drama set in India during the 1920s, revolving around the inspiring journey of two of India`s freedom fighters - Alluri Sitarama Raju and Komaram Bheem.</p>
