@@ -15,7 +15,7 @@ function App() {
            <Route path='/movie' element={<Movie />} />
          </Routes>
    
-        {/* <Movie /> */}
+       
     </div>
   );
       }
