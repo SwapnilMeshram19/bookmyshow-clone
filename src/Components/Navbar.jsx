@@ -6,6 +6,7 @@ const Navbar = () => {
 
 <Link to='/movie'>Navbar</Link>
 
+navbar
     </div>
   )
 }

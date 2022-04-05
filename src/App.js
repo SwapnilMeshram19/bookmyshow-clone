@@ -14,7 +14,7 @@ function App() {
 
            <Route path='/movie' element={<Movie />} />
          </Routes>
-   
+  
        
     </div>
   );
