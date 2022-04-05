@@ -1,0 +1,23 @@
+.poster{
+    width: 203.5px;
+    height: 445.91px;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+  
+  
+  }
+  .posterimg{
+    width: 203.5px;
+    height: 345px;
+  }
+  .posts{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    gap: 10px;
+  }
+  .container{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+  }
