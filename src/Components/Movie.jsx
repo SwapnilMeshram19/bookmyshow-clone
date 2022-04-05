@@ -1,10 +1,11 @@
 import React from 'react'
 import './Movie.css'
+import { useNavigate } from 'react-router-dom'
 
 const Movie = () => {
     const [item , setItems] = React.useState([])
     const [copyitem,setCopyItems]=React.useState([])
-
+const navigate = useNavigate();
     React.useEffect(()=>{
         getData()
     },[])
@@ -67,6 +68,7 @@ const Movie = () => {
     }
 const handleClick =(posti)=>{
     console.log(posti)
+    navigate(`/moviedata/${posti}`)
 }
     // Marathi
   return (
@@ -129,7 +131,7 @@ const handleClick =(posti)=>{
           return(
             <div key={post.id} className='poster' onClick={()=> handleClick(post.id )} >
           
-            <div className='posterimg' > <img src={post.poster} style={{width: "100%" , height: "100%" , borderRadius: "10px"}} /> </div>
+            <div className='posterimg' > <img src={post.} style={{width: "100%" , height: "100%" , borderRadius: "10px"}} /> </div>
             <div className='postertitle'>
             <h4 style={{margin: "0px"}}>{post.title}</h4>
             <p style={{margin: "0px"}}>{post.tag}</p>
