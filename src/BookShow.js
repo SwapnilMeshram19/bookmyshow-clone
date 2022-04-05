@@ -1,4 +1,9 @@
 import './BookShow.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaAngleDown } from 'react-icons/fa';
+import { FaChevronLeft } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
+
 
 function App() {
   return (
@@ -66,7 +71,43 @@ function App() {
       </div>
       <div class="filter-container">
         <div class="slider-container">
+          <FaChevronLeft size="20px" class="right-icon"/>
+          <ul class="slider-ul">
+            <li class="days-container">
+              <div class="date">07</div>
+              <div class="day">TOM</div>
+            </li>
+            <li>
+              <div class="date">07</div>
+              <div class="day">TOM</div>
+            </li>
+            <li>
+              <div class="date">07</div>
+              <div class="day">TOM</div>
+            </li>
+            <li>
+              <div class="date">07</div>
+              <div class="day">TOM</div>
+            </li>
+          </ul>
           
+          <FaChevronRight size="20px" class="left-icon"/>
+
+        </div>
+        <div class="links-box">
+        <ul>
+          <li>
+            <div class="link">
+              <a href="#"><span>Hindi 3D</span></a>
+              <FaAngleDown class="down-icons" size="25px"/>
+              <div class="dropdown-content" >
+                <a href="./allDisease.html" target="_blank">Hindi Imax 3D</a>
+                <a href="">Hindi 2D</a>
+                <a href="">Hindi Imax 3D</a>
+              </div>
+            </div>
+          </li>
+          </ul>
         </div>
       </div>
     </div>
