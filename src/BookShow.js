@@ -72,6 +72,7 @@ function App() {
       <div class="filter-container">
         <div class="slider-container">
           <FaChevronLeft size="20px" class="right-icon"/>
+          <div class="slider">
           <ul class="slider-ul">
             <li class="days-container">
               <div class="date">07</div>
@@ -90,6 +91,8 @@ function App() {
               <div class="day">TOM</div>
             </li>
           </ul>
+          </div>
+          
           
           <FaChevronRight size="20px" class="left-icon"/>
 
