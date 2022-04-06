@@ -29,7 +29,7 @@
    vertical-align: baseline;
    background: 0 0;
  }
- a{
+ .movie-name>h1>a{
    text-decoration: none;
    text-decoration-line: none;
    text-decoration-thickness: initial;
@@ -297,3 +297,147 @@
  .right-icon:hover,.left-icon:hover{
    color:#282c34;
  }     
+
+
+ /* Show detials container */
+
+ .show-details{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.theater-info{
+    width:30%;
+    display: inline-block;
+}
+.wishlist-icon{
+    border-radius: 20%;
+    border-bottom-left-radius: 110%;
+    border-bottom-right-radius: 110%;
+    width:20px;
+    display: inline-block;
+
+}
+.wishlist-icon:hover{
+    background-color: red;
+}
+.theater-name{
+    width: 290px;
+    font-weight: 700;
+    color: #333;
+    display: inline-block;
+    vertical-align:middle;
+    margin-left: 10px;
+}
+.info-icon{
+    display: inline-block;
+}
+.info-icon img {
+    width:16px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+}
+.info-icon span{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #7d7d7d;
+    margin-left: 4px;
+    display: inline-block;
+    vertical-align: top;
+}
+.mticket-bevarage-container{
+    padding:10px;
+}
+.mticket-icon,.foodbevarage-icon{
+    text-align: center;
+}
+.mticket-icon img,.foodbevarage-icon img{
+    width: 22px;
+    display:inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.mticket-icon span,.foodbevarage-icon span{
+    font-weight: 400;
+    font-size: 13px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.mticket-icon span{
+    color: #49ba8e;
+}
+.foodbevarage-icon span{
+    color: #ffa426;
+}
+.show-time-container{
+    border: 1px solid #999;
+    color: #4abd5d;
+    border-radius: 4px;
+    width: 96px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.show-time{
+    width:50%;
+    display:flex;
+    flex-direction: row;
+    padding-top: 10px;
+    position: relative;
+}
+
+.prices-bubble{
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #666;
+    -moz-box-shadow: 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px #888;
+    display: none;
+}
+.prices-bubble:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+    top: 70px;
+    border: 6px solid;
+    border-color: #fff transparent transparent #fff;
+}
+
+.prices-bubble:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 35px;
+    top: 70px;
+    border: 10px solid;
+    border-color: rgb(171, 171, 171) transparent transparent #666;
+}
+.show-time-container:hover+.prices-bubble{
+    display: block;
+}
+.price-avail>.price{
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+}
+.price-avail>.class-seat{
+    font-size: 11px;
+    color: #666;
+}
+.price-avail>.status{
+    font-size: 14px;
+    color:#49ba8e;
+}

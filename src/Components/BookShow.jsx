@@ -7,64 +7,64 @@ import { FaAngleDown } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FaChevronRight } from 'react-icons/fa';
 
+const BookShow= () => {
 
-function bookshow() {
   return (
     <div className="Container">
         <Navbar/>
-      <div class="movie-details">
-        <div class="movie-details-container">
-          <div class="text-details">
-            <div class="movie-info">
-              <div class="movie-name">
+      <div className="movie-details">
+        <div className="movie-details-container">
+          <div className="text-details">
+            <div className="movie-info">
+              <div className="movie-name">
                 <h1><a>RRR</a></h1>
-                <div class="ua-icon">
-                    {/* <img src={require('./image/ua_icon.png')}></img> */}
-                    <span class="heart-rating">
-                      <span class="heart-icon">
-                        {/* <img src={require('./image/heart.png')}></img> */}
+                <div className="ua-icon">
+                    <img src={require('./Image/ua_icon.png')}></img>
+                    <span className="heart-rating">
+                      <span className="heart-icon">
+                        <img src={require('./Image/heart.png')}></img>
                       </span>
-                      <span class="percentage">90 %</span>
+                      <span className="percentage">90 %</span>
                       <br/>
-                      <span class="votes">622134 VOTES</span>
+                      <span className="votes">622134 VOTES</span>
                     </span>
-                    <span class="tags">
-                    <span class="genre-tag">Action</span>
-                    <span class="genre-tag">Drama</span>
-                    <span class="genre-tag">Historical</span>
-                    <span class="genre-tag">Period</span>
+                    <span className="tags">
+                    <span className="genre-tag">Action</span>
+                    <span className="genre-tag">Drama</span>
+                    <span className="genre-tag">Historical</span>
+                    <span className="genre-tag">Period</span>
                     </span>
-                    <span class="release-date">March 25,2022</span>
-                    <span class="clock-icon">
-                      {/* <img src={(require('./image/clock_icon.png'))}></img> */}
+                    <span className="release-date">March 25,2022</span>
+                    <span className="clock-icon">
+                      <img src={(require('./Image/clock_icon.png'))}></img>
                     </span>
-                    <span class="duration">3 hrs 02 mins</span>
+                    <span className="duration">3 hrs 02 mins</span>
                 </div>
               </div>
-              <div class="movie-cast">
-                  <div class="director-info">
-                    <div class="movie-cast-title">DIRECTOR</div>
-                    <img class="movie-cast-image" src='https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/s-s-rajamouli-29189-07-10-2020-04-30-40.jpg'></img>
-                    <div class="movie-cast-name" >S. S. Rajamouli</div>
+              <div className="movie-cast">
+                  <div className="director-info">
+                    <div className="movie-cast-title">DIRECTOR</div>
+                    <img className="movie-cast-image" src='https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/s-s-rajamouli-29189-07-10-2020-04-30-40.jpg'></img>
+                    <div className="movie-cast-name" >S. S. Rajamouli</div>
                   </div>
-                  <div class="cast-info">
-                     <div class="movie-cast-title">CAST & CREW</div>
-                     <div class="individual-cast-info">
+                  <div className="cast-info">
+                     <div className="movie-cast-title">CAST & CREW</div>
+                     <div className="individual-cast-info">
                      
-                     <img class="movie-cast-image" src='https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/jr-ntr-15411-19-09-2017-01-52-16.jpg'></img>
-                     <div class="movie-cast-name" >Jr. NTR</div>
+                     <img className="movie-cast-image" src='https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/jr-ntr-15411-19-09-2017-01-52-16.jpg'></img>
+                     <div className="movie-cast-name" >Jr. NTR</div>
                      </div> 
-                     <div class="individual-cast-info">
-                     <img class="movie-cast-image" src='https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/ram-charan-teja-1046368-19-09-2017-02-37-43.jpg'></img>
-                     <div class="movie-cast-name" >Ram Cha</div>
+                     <div className="individual-cast-info">
+                     <img className="movie-cast-image" src='https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/ram-charan-teja-1046368-19-09-2017-02-37-43.jpg'></img>
+                     <div className="movie-cast-name" >Ram Cha</div>
                      </div> 
-                     <div class="individual-cast-info">
-                     <img class="movie-cast-image" src='https://in.bmscdn.com/iedb/artist/images/website/poster/large/alia-bhatt-21065-13-09-2017-04-53-45.jpg'></img>
-                     <div class="movie-cast-name" >Alia Bhat</div>
+                     <div className="individual-cast-info">
+                     <img className="movie-cast-image" src='https://in.bmscdn.com/iedb/artist/images/website/poster/large/alia-bhatt-21065-13-09-2017-04-53-45.jpg'></img>
+                     <div className="movie-cast-name" >Alia Bhat</div>
                      </div> 
-                     <div class="individual-cast-info">
-                     <img class="movie-cast-image" src='https://in.bmscdn.com/iedb/artist/images/website/poster/large/ajay-devgn-24051-12-09-2017-04-41-13.jpg'></img>
-                     <div class="movie-cast-name" >Ajay Devgn</div>
+                     <div className="individual-cast-info">
+                     <img className="movie-cast-image" src='https://in.bmscdn.com/iedb/artist/images/website/poster/large/ajay-devgn-24051-12-09-2017-04-41-13.jpg'></img>
+                     <div className="movie-cast-name" >Ajay Devgn</div>
                      </div> 
                   </div>
                 </div>
@@ -73,41 +73,41 @@ function bookshow() {
         </div>
 
       </div>
-      <div class="filter-container">
-        <div class="slider-container">
-          <FaChevronLeft size="20px" class="right-icon"/>
-          <div class="slider">
-          <ul class="slider-ul">
-            <li class="days-container">
-              <div class="date">07</div>
-              <div class="day">TOM</div>
+      <div className="filter-container">
+        <div className="slider-container">
+          <FaChevronLeft size="20px" className="right-icon"/>
+          <div className="slider">
+          <ul className="slider-ul">
+            <li className="days-container">
+              <div className="date">07</div>
+              <div className="day">TOM</div>
             </li>
             <li>
-              <div class="date">07</div>
-              <div class="day">TOM</div>
+              <div className="date">07</div>
+              <div className="day">TOM</div>
             </li>
             <li>
-              <div class="date">07</div>
-              <div class="day">TOM</div>
+              <div className="date">07</div>
+              <div className="day">TOM</div>
             </li>
             <li>
-              <div class="date">07</div>
-              <div class="day">TOM</div>
+              <div className="date">07</div>
+              <div className="day">TOM</div>
             </li>
           </ul>
           </div>
           
           
-          <FaChevronRight size="20px" class="left-icon"/>
+          <FaChevronRight size="20px" className="left-icon"/>
 
         </div>
-        <div class="links-box">
+        <div className="links-box">
         <ul>
           <li>
-            <div class="link">
+            <div className="link">
               <a href="#"><span>Hindi 3D</span></a>
-              <FaAngleDown class="down-icons" size="25px"/>
-              <div class="dropdown-content" >
+              <FaAngleDown className="down-icons" size="25px"/>
+              <div className="dropdown-content" >
                 <a href="./allDisease.html" target="_blank">Hindi Imax 3D</a>
                 <a href="">Hindi 2D</a>
                 <a href="">Hindi Imax 3D</a>
@@ -117,9 +117,51 @@ function bookshow() {
           </ul>
         </div>
       </div>
+      <div class="show-details"> 
+        <div class="theater-info">
+            <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
+            <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
+            <span class="info-icon">
+                <img src="https://in.bmscdn.com/moviemode/cinemaphotoshowcase/safety_first.png"/>
+                <span>INFO</span>
+            </span>
+            <div class="mticket-bevarage-container">
+                <span class="mticket-icon">
+                    <img src={require('./Image/mticket.png')}/>
+                    <span>M-Ticket</span>
+                </span>
+                <span class="foodbevarage-icon">
+                    <img src={require('./Image/food-bevarage.png')}/>
+                    <span>Food & Beverage</span>
+                </span>
+            </div>
+    
+        </div>
+        
+        <div class="show-time">
+            <div class="show-time-container">
+                    <a>07:35 PM</a>
+            </div>
+            <div class="prices-bubble">
+                <div class="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+             </div>
+            </div>
+            <div class="show-time-container">
+                <a>07:35 PM</a>
+            </div>
+            <div class="show-time-container">
+                <a>07:35 PM</a>
+            </div>
+        </div>
+        
+
+    </div>
       <Footer/>
     </div>
   );
 }
 
-export default bookshow;
+export {BookShow};
