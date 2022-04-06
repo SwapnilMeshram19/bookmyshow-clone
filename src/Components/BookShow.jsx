@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import './BookShow.css';
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -6,7 +7,6 @@ import Footer from './Footer'
 import { FaAngleDown } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FaChevronRight } from 'react-icons/fa';
-
 
 import Dialog from "@material-ui/core/Dialog";
 import DialogContentText from "@material-ui/core/DialogContentText";
@@ -25,7 +25,7 @@ const BookShow= () => {
   
    const handleToAccept=()=>{
 
-   }
+  }
    const handleToCancle = () => {
     setOpen(false);
    };
@@ -644,10 +644,10 @@ const BookShow= () => {
         
 
     </div>
-    
-      <Footer/>
+          
+      
    </div>
-   
+   <Footer/>
     </div>
   );
 }
