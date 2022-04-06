@@ -71,6 +71,7 @@ const bookticket =()=>{
 <div style={{  display: "inline-block" ,marginTop: "15px" , padding: "7px" , borderRadius: "5px"}}><h4 style={{margin: "0px", color: "white"}}>3h 3m . Action, Drama, Historical, Period. UA. 25 Mar,2022</h4></div>
 
 <br />
+
 <button style={{padding: "15px" , paddingLeft: "60px", paddingRight: "60px", borderRadius: "10px" ,backgroundColor: "red" , color: "white"}} onClick={()=> bookticket()}>Book tickets</button>
 </div>
 </div>

@@ -6,8 +6,8 @@ const Navbar = () => {
 
 <Link to='/movie'>Navbar</Link>
 <Link to='/moviedata'></Link>
+<Link to='/payment'>payment</Link>
 
-navbar
     </div>
   )
 }

@@ -1,0 +1,36 @@
+
+.share{
+    width: 65%;
+}
+.sharecontact{
+    background-color: rgb(236, 86, 86);
+  padding: 2px;
+  margin-left: 8%;
+
+}
+.sharecontact h3{
+    margin-left: 30px;
+color: white;
+}
+.address{
+    padding: 2px;
+  margin-left: 8%;
+  background-color: white;
+  padding-bottom: 20px;
+}
+.address input{
+    padding: 1%;
+    /* margin: 20px; */
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.address div{
+    display: inline;
+    margin-left: 60px;
+    background-color: rgb(236, 86, 86);
+    padding: 1.5%;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    border-radius: 10px;
+    color: white;
+}
