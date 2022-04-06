@@ -37,7 +37,8 @@ padding-right: 6px;
   margin: 10px;
   color: rgba(202, 33, 33, 0.81);
   background-color: white;
-  border: 1px solid gray;
+  border: 1px solid rgba(220, 218, 218, 0.797);
+  cursor: pointer;
 }
 .product button{
   border-radius: 30px;

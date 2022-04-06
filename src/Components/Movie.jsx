@@ -81,7 +81,7 @@ const handleClick =(posti)=>{
        <div className='btn'>
          <p style={{margin: "0px" , marginLeft: "15px" , display: "inline-block" ,marginRight: "120px"} }>Languages</p>
         {/* <button onClick={()=>showAll()}>Show All</button> */}
-        <div onClick={()=> showAll()} style={{display: "inline-block"}} >Clear</div>
+        <div onClick={()=> showAll()} style={{display: "inline-block" , cursor: "pointer"}} >Clear</div>
         <button onClick={()=>hindi()}>Hindi </button>
         <button onClick={()=>english()}>English</button>
         <button onClick={()=>telegue()}>Telugue</button>
@@ -91,17 +91,29 @@ const handleClick =(posti)=>{
         </div>
 
         <div className='btn'>
-         <p style={{margin: "0px" , marginLeft: "15px" , display: "inline-block" ,marginRight: "120px"} }>Languages</p>
+         <p style={{margin: "0px" , marginLeft: "15px" , display: "inline-block" ,marginRight: "120px"} }>Genres</p>
         {/* <button onClick={()=>showAll()}>Show All</button> */}
-        <div onClick={()=> showAll()} style={{display: "inline-block"}} >Clear</div>
-        <button onClick={()=>hindi()}>Hindi </button>
-        <button onClick={()=>english()}>English</button>
-        <button onClick={()=>telegue()}>Telugue</button>
-        <button onClick={()=>tamil()}>Tamil</button>
-        <button onClick={()=>punjabi()}>Punjabi</button>      
-        <button onClick={()=>marathi()}>Marathi</button> 
+        <div onClick={()=> showAll()} style={{display: "inline-block" , cursor: "pointer"}} >Clear</div>
+        <button>Adventure </button>
+        <button >Drama</button>
+        <button >Action</button>
+        <button >Sci-Fi</button>
+        <button >Crime</button>      
+        <button >Musical</button> 
         </div>
 
+      
+        <div className='btn'>
+         <p style={{margin: "0px" , marginLeft: "15px" , display: "inline-block" ,marginRight: "120px"} }>Format</p>
+        {/* <button onClick={()=>showAll()}>Show All</button> */}
+        <div onClick={()=> showAll()} style={{display: "inline-block", cursor: "pointer"}} >Clear</div>
+        <button>2D </button>
+        <button >3D</button>
+        <button >4DX</button>
+        <button >7D</button>
+        <button >IMAX 2D</button>      
+        <button >MX4D</button> 
+        </div>
 
 
 
