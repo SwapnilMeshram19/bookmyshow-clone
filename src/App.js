@@ -1,6 +1,6 @@
 import "./App.css";
 import { Homepage } from "./Components/Homepage/Homepage";
-// import Footer from "./Routes/Footer";
+import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 // import Router from "./Routes/Router";
 
@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Navbar />
       <Homepage />
-      {/* <Router />
-      <Footer /> */}
+      {/* <Router /> */}
+      <Footer />
 
     </div>
   );

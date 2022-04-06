@@ -20,7 +20,7 @@ import Drawer from "@material-ui/core/Drawer";
 // import { useReducer } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import { cityRequest, storeAuth } from "../Redux/app/actions";
-// import Login from "../Pages/LoginPage";
+import Login from "../Components/Homepage/LoginPage";
 
 // 'stats.errorDetails: true'
 
@@ -89,7 +89,7 @@ const Navbar = () => {
   const [state, setState] = React.useState(false);
   const [auth, setAuth] = React.useState(false);
   const [action, setAction] = React.useState(false);
-//   const isAuth = useSelector((state) => state.app.isAuth);
+  const isAuth = useSelector((state) => state.app.isAuth);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -165,20 +165,20 @@ const Navbar = () => {
             <div>{cityName}</div>
             <ArrowDropDownIcon />
           </div>
-          {/* {!isAuth && (
+          {!isAuth && (
             <button onClick={handleSignIn} className="signBtn">
                 <p>Sign In</p>
               
             </button>
-          )} */}
-          {/* <Login action={action} handleCloseLogin={handleCloseLogin} /> */}
+          )}
+          <Login action={action} handleCloseLogin={handleCloseLogin} />
           <div
             onClick={toggleDrawer(true)}
             onClose={toggleDrawer(false)}
             className="profile"
           >
-            {/* {isAuth && <AccountCircleIcon style={{ fontSize: "40px" }} />}
-            {isAuth && <div>Hi, User..</div>} */}
+            {isAuth && <AccountCircleIcon style={{ fontSize: "40px" }} />}
+            {isAuth && <div>Hi, User..</div>}
 
             <Drawer anchor="right" open={state}>
               <div className="drawer">

@@ -34,8 +34,8 @@ const CarouselSection = () => {
             <Carousel responsive={responsive} removeArrowOnDeviceType={["mobile"]} autoPlay infinite>
                 {
                     dataSet?.map((banner, index) => (
-                        <div style={{ padding: "0px 55px", margin: "0px 100px 0px 5px"}} key={index + 1}>
-                            <img style={{ width: "1250px", height: "320px", cursor: "pointer" }} src={banner} alt="Advertisement banner" />
+                        <div style={{ padding: "0px 15px"}} key={index + 1}>
+                            <img style={{ width: "110%", cursor: "pointer" }} src={banner} alt="Advertisement banner" />
                         </div>
                     ))
                 }
