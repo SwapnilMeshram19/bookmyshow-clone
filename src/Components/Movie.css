@@ -9,15 +9,55 @@
   .posterimg{
     width: 203.5px;
     height: 345px;
+    
   }
   .posts{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     justify-items: center;
-    gap: 10px;
+    gap: 30px;
   }
   .container{
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 35px;
   }
+.btn{
+  width: 250px;
+  height: 120px;
+  background-color: white
+  ;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.btn button{
+padding: 4px;
+padding-left: 6px;
+padding-right: 6px;
+  margin: 10px;
+  color: rgba(202, 33, 33, 0.81);
+  background-color: white;
+  border: 1px solid rgba(220, 218, 218, 0.797);
+  cursor: pointer;
+}
+.product button{
+  border-radius: 30px;
+  padding: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgba(202, 33, 33, 0.81);
+  background-color: white;
+  border: 1px solid gray;
+  margin-right: 10px;
+
+}
+body{
+  background-color: rgb(248, 243, 243);
+}
+.comingsoon{
+  height: 80px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  background-color: white;
+  border-radius: 10px;
+}
