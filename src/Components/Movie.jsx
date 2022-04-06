@@ -1,6 +1,8 @@
 import React from 'react'
 import './Movie.css'
 import { useNavigate } from 'react-router-dom'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 const Movie = () => {
     const [item , setItems] = React.useState([])
@@ -73,7 +75,8 @@ const handleClick =(posti)=>{
     // Marathi
   return (
   
-    
+      <>
+      <Navbar/>
     <div className='container'>
      
        <div >
@@ -159,6 +162,8 @@ const handleClick =(posti)=>{
     </div>
 
     </div>
+    <Footer/>
+    </>
   )
 }
 

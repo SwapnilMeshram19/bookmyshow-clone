@@ -1,7 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import Footer from './Footer'
 // import { Movie } from './Movie'
 import './moviedata.css'
+import Navbar from './Navbar'
 const Moviedata = () => {
   const [item , setItems] = React.useState([])
   const [copyitem,setCopyItems]=React.useState([])
@@ -34,6 +36,8 @@ const bookticket =()=>{
 
 
   return (
+    <>
+    <Navbar/>
     <div>
         
 
@@ -60,7 +64,7 @@ const bookticket =()=>{
   <div className='addyour'>
   <h3 style={{display: "inline-block", margin: "0px"}}>Add your rating & review</h3><br /><span>Your rating matter</span>
  </div >
- <button style={{width: "90px", height: "35px" , borderRadius: "10px" ,marginTop: "10px"}}>Rate now</button>
+ <button style={{width: "90px", height: "35px" , borderRadius: "10px" ,marginTop: "10px", border: "1px solid white"}}>Rate now</button>
  </div>
  <div style={{backgroundColor: "whitesmoke" , display: "inline-block" ,marginTop: "25px" , padding: "7px" , borderRadius: "5px"}}><h4 style={{margin: "0px"}}>2D, 3D, IMAX 3D, IMAX 2D</h4></div>
 <br />
@@ -71,8 +75,7 @@ const bookticket =()=>{
 <div style={{  display: "inline-block" ,marginTop: "15px" , padding: "7px" , borderRadius: "5px"}}><h4 style={{margin: "0px", color: "white"}}>3h 3m . Action, Drama, Historical, Period. UA. 25 Mar,2022</h4></div>
 
 <br />
-
-<button style={{padding: "15px" , paddingLeft: "60px", paddingRight: "60px", borderRadius: "10px" ,backgroundColor: "red" , color: "white"}} onClick={()=> bookticket()}>Book tickets</button>
+<button style={{padding: "15px", border: "1px solid red", paddingLeft: "60px", paddingRight: "60px", borderRadius: "10px" ,backgroundColor: "red" , color: "white"}} onClick={()=> bookticket()}>Book tickets</button>
 </div>
 </div>
 
@@ -257,6 +260,8 @@ We would never expect rajamouli direction,every time something new,it was awesom
  </div>
 
     </div>
+    <Footer/>
+    </>
   )
 }
 
