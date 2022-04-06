@@ -1,4 +1,7 @@
+import React from 'react'
 import './BookShow.css';
+import Navbar from './Navbar'
+import Footer from './Footer'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaAngleDown } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
@@ -7,7 +10,8 @@ import { FaChevronRight } from 'react-icons/fa';
 
 function bookshow() {
   return (
-    <div className="App">
+    <div className="Container">
+        <Navbar/>
       <div class="movie-details">
         <div class="movie-details-container">
           <div class="text-details">
@@ -113,6 +117,7 @@ function bookshow() {
           </ul>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
