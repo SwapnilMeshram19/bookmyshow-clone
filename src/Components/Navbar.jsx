@@ -376,7 +376,7 @@ const Navbar = () => {
       </Dialog>
       <div className="secondNav">
         <div>
-          <Link className="link" to="/">
+          <Link className="link" to="/movie">
             Movies
           </Link>
           <Link className="link" to="/">
@@ -400,6 +400,7 @@ const Navbar = () => {
           <Link className="link" to="">
             Buzz
           </Link>
+          <Link to="/moviedata"/>
         </div>
         <div>
           <Link className="link" to="">

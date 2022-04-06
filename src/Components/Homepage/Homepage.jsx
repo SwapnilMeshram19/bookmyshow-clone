@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from '../Footer';
+import Navbar from '../Navbar';
 import { CarouselSection } from './CarouselSection';
 import { Entertainment } from './Entertainment';
 import { EventsHappening } from './EventsHappening';
@@ -13,6 +15,7 @@ import { RecommendedMovies } from './RecommendedMovies';
 const Homepage = () => {
   return (
     <div>
+      <Navbar/>
       <CarouselSection />
       <RecommendedMovies />
       <Entertainment />
@@ -25,6 +28,7 @@ const Homepage = () => {
             <PopularEvents />
             <ExploreFunActivites/>
       </div>
+      <Footer />
     </div>
   )
 }
