@@ -180,12 +180,6 @@ const Navbar = () => {
             {isAuth && <AccountCircleIcon style={{ fontSize: "40px" }} />}
             {isAuth && <div>Hi, User..</div>}
 
-<<<<<<< HEAD
-<Link to='/movie'>Navbar</Link>
-<Link to='/moviedata'></Link>
-<Link to='/payment'>payment</Link>
-
-=======
             <Drawer anchor="right" open={state}>
               <div className="drawer">
                 <div>
@@ -423,7 +417,6 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
->>>>>>> 2ee578e3dd888f5c5d730425ab317664b69a0609
     </div>
   );
 };
