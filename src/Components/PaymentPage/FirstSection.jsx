@@ -23,7 +23,6 @@ const FirstSection = () => {
 
 </div>
 
-
     </div>
   )
 }
