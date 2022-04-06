@@ -7,11 +7,81 @@ import { FaAngleDown } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FaChevronRight } from 'react-icons/fa';
 
+
+import Dialog from "@material-ui/core/Dialog";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import Button from "@material-ui/core/Button";
+
 const BookShow= () => {
 
+   const [open, setOpen] = React.useState(false);
+  
+   const handleClickToOpen = () => {
+    setOpen(true);
+   };
+  
+   const handleToAccept=()=>{
+
+   }
+   const handleToCancle = () => {
+    setOpen(false);
+   };
+   
+   const Title = ({ children }) => <div class='dialog-title'>{children}</div>;
+   const Content = ({ children }) => <div class='dialog-content'>{children}</div>;
+   const style=Theme=> ({
+
+   });
   return (
     <div className="Container">
         <Navbar/>
+        
+        <div stlye={{style}}>
+      <Dialog open={open} onClose={handleToCancle}>
+        <DialogTitle ><Title>{"Term and Conditions"}</Title></DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            <Content>
+            <ol>
+              <li>Ticket is compulsory for children of 3 years & above.</li>
+              <li>Incase the ticket is lost or misplaced, duplicate ticket will not be issued.</li>
+              <li>Outside food & beverages are not allowed inside the cinema premises.</li>
+              <li>Decision(s) taken by Cinepolis management is final & abiding.</li>
+              <li>For 3D movies, ticket price includes charges towards usage of 3D glasses.</li>
+              <li>Patrons below the age of 18 years will not be allowed to watch the `A` rated movie.</li>
+            </ol>
+            </Content>
+            
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+         
+          <Button onClick={handleToCancle} style={{
+                color:'#F84464',
+                width:'40%',
+                margin: '4%',
+                padding:'10px',
+                border: '2px solid #F84464',
+                borderRadius:'10px',
+                cursor: 'pointer'
+            }}>Cancle</Button>
+    
+          <Button onClick={handleToAccept} style={{
+                color:'white',
+                width:'40%',
+                margin: '4%',
+                padding:'10px',
+                border: '2px solid #F84464',
+                borderRadius:'10px',
+                cursor: 'pointer',
+                backgroundColor:'#F84464'
+             }}>Accept</Button>
+        </DialogActions>
+      </Dialog>
+    </div>
       <div className="movie-details">
         <div className="movie-details-container">
           <div className="text-details">
@@ -80,19 +150,19 @@ const BookShow= () => {
           <ul className="slider-ul">
             <li className="days-container">
               <div className="date">07</div>
+              <div className="day">TODAY</div>
+            </li>
+            <li>
+              <div className="date">08</div>
               <div className="day">TOM</div>
             </li>
             <li>
-              <div className="date">07</div>
-              <div className="day">TOM</div>
+              <div className="date">09</div>
+              <div className="day">SAT</div>
             </li>
             <li>
-              <div className="date">07</div>
-              <div className="day">TOM</div>
-            </li>
-            <li>
-              <div className="date">07</div>
-              <div className="day">TOM</div>
+              <div className="date">10</div>
+              <div className="day">SUN</div>
             </li>
           </ul>
           </div>
@@ -104,7 +174,7 @@ const BookShow= () => {
         <div className="links-box">
         <ul>
           <li>
-            <div className="link">
+            <div className="links">
               <a href="#"><span>Hindi 3D</span></a>
               <FaAngleDown className="down-icons" size="25px"/>
               <div className="dropdown-content" >
@@ -118,6 +188,7 @@ const BookShow= () => {
         </div>
       </div>
       <div class="show-details"> 
+       <div className='show-details-container'>
         <div class="theater-info">
             <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
             <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
@@ -138,28 +209,445 @@ const BookShow= () => {
     
         </div>
         
-        <div class="show-time">
-            <div class="show-time-container">
+        <div className="show-time">
+            <div className="show-time-container" onClick={handleClickToOpen}>
                     <a>07:35 PM</a>
             </div>
-            <div class="prices-bubble">
-                <div class="price-avail">
+            <div className="prices-bubble">
+                <div className="price-avail">
                     <span class="price">Rs. 100.00</span><br/>
                     <span class="class-seat">Normal</span><br/>
                     <span class="status">Available</span>
-             </div>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
             </div>
-            <div class="show-time-container">
+            <div class="show-time-container" onClick={handleClickToOpen}>
                 <a>07:35 PM</a>
             </div>
-            <div class="show-time-container">
+            <div class="show-time-container" onClick={handleClickToOpen}>
                 <a>07:35 PM</a>
             </div>
         </div>
         
 
     </div>
+    <div className='show-details-container'>
+        <div class="theater-info">
+            <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
+            <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
+            <span class="info-icon">
+                <img src="https://in.bmscdn.com/moviemode/cinemaphotoshowcase/safety_first.png"/>
+                <span>INFO</span>
+            </span>
+            <div class="mticket-bevarage-container">
+                <span class="mticket-icon">
+                    <img src={require('./Image/mticket.png')}/>
+                    <span>M-Ticket</span>
+                </span>
+                <span class="foodbevarage-icon">
+                    <img src={require('./Image/food-bevarage.png')}/>
+                    <span>Food & Beverage</span>
+                </span>
+            </div>
+    
+        </div>
+        
+        <div className="show-time">
+            <div className="show-time-container" onClick={handleClickToOpen}>
+                    <a>07:35 PM</a>
+            </div>
+            <div className="prices-bubble">
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+        </div>
+        
+
+    </div>
+    <div className='show-details-container'>
+        <div class="theater-info">
+            <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
+            <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
+            <span class="info-icon">
+                <img src="https://in.bmscdn.com/moviemode/cinemaphotoshowcase/safety_first.png"/>
+                <span>INFO</span>
+            </span>
+            <div class="mticket-bevarage-container">
+                <span class="mticket-icon">
+                    <img src={require('./Image/mticket.png')}/>
+                    <span>M-Ticket</span>
+                </span>
+                <span class="foodbevarage-icon">
+                    <img src={require('./Image/food-bevarage.png')}/>
+                    <span>Food & Beverage</span>
+                </span>
+            </div>
+    
+        </div>
+        
+        <div className="show-time">
+            <div className="show-time-container" onClick={handleClickToOpen}>
+                    <a>07:35 PM</a>
+            </div>
+            <div className="prices-bubble">
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+        </div>
+        
+
+    </div>
+    <div className='show-details-container'>
+        <div class="theater-info">
+            <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
+            <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
+            <span class="info-icon">
+                <img src="https://in.bmscdn.com/moviemode/cinemaphotoshowcase/safety_first.png"/>
+                <span>INFO</span>
+            </span>
+            <div class="mticket-bevarage-container">
+                <span class="mticket-icon">
+                    <img src={require('./Image/mticket.png')}/>
+                    <span>M-Ticket</span>
+                </span>
+                <span class="foodbevarage-icon">
+                    <img src={require('./Image/food-bevarage.png')}/>
+                    <span>Food & Beverage</span>
+                </span>
+            </div>
+    
+        </div>
+        
+        <div className="show-time">
+            <div className="show-time-container" onClick={handleClickToOpen}>
+                    <a>07:35 PM</a>
+            </div>
+            <div className="prices-bubble">
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+        </div>
+        
+
+    </div>
+    <div className='show-details-container'>
+        <div class="theater-info">
+            <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
+            <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
+            <span class="info-icon">
+                <img src="https://in.bmscdn.com/moviemode/cinemaphotoshowcase/safety_first.png"/>
+                <span>INFO</span>
+            </span>
+            <div class="mticket-bevarage-container">
+                <span class="mticket-icon">
+                    <img src={require('./Image/mticket.png')}/>
+                    <span>M-Ticket</span>
+                </span>
+                <span class="foodbevarage-icon">
+                    <img src={require('./Image/food-bevarage.png')}/>
+                    <span>Food & Beverage</span>
+                </span>
+            </div>
+    
+        </div>
+        
+        <div className="show-time">
+            <div className="show-time-container" onClick={handleClickToOpen}>
+                    <a>07:35 PM</a>
+            </div>
+            <div className="prices-bubble">
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+        </div>
+        
+
+    </div>
+    <div className='show-details-container'>
+        <div class="theater-info">
+            <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
+            <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
+            <span class="info-icon">
+                <img src="https://in.bmscdn.com/moviemode/cinemaphotoshowcase/safety_first.png"/>
+                <span>INFO</span>
+            </span>
+            <div class="mticket-bevarage-container">
+                <span class="mticket-icon">
+                    <img src={require('./Image/mticket.png')}/>
+                    <span>M-Ticket</span>
+                </span>
+                <span class="foodbevarage-icon">
+                    <img src={require('./Image/food-bevarage.png')}/>
+                    <span>Food & Beverage</span>
+                </span>
+            </div>
+    
+        </div>
+        
+        <div className="show-time">
+            <div className="show-time-container" onClick={handleClickToOpen}>
+                    <a>07:35 PM</a>
+            </div>
+            <div className="prices-bubble">
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+        </div>
+        
+
+    </div>
+    <div className='show-details-container'>
+        <div class="theater-info">
+            <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
+            <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
+            <span class="info-icon">
+                <img src="https://in.bmscdn.com/moviemode/cinemaphotoshowcase/safety_first.png"/>
+                <span>INFO</span>
+            </span>
+            <div class="mticket-bevarage-container">
+                <span class="mticket-icon">
+                    <img src={require('./Image/mticket.png')}/>
+                    <span>M-Ticket</span>
+                </span>
+                <span class="foodbevarage-icon">
+                    <img src={require('./Image/food-bevarage.png')}/>
+                    <span>Food & Beverage</span>
+                </span>
+            </div>
+    
+        </div>
+        
+        <div className="show-time">
+            <div className="show-time-container" onClick={handleClickToOpen}>
+                    <a>07:35 PM</a>
+            </div>
+            <div className="prices-bubble">
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+        </div>
+        
+
+    </div>
+    <div className='show-details-container'>
+        <div class="theater-info">
+            <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
+            <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
+            <span class="info-icon">
+                <img src="https://in.bmscdn.com/moviemode/cinemaphotoshowcase/safety_first.png"/>
+                <span>INFO</span>
+            </span>
+            <div class="mticket-bevarage-container">
+                <span class="mticket-icon">
+                    <img src={require('./Image/mticket.png')}/>
+                    <span>M-Ticket</span>
+                </span>
+                <span class="foodbevarage-icon">
+                    <img src={require('./Image/food-bevarage.png')}/>
+                    <span>Food & Beverage</span>
+                </span>
+            </div>
+    
+        </div>
+        
+        <div className="show-time">
+            <div className="show-time-container" onClick={handleClickToOpen}>
+                    <a>07:35 PM</a>
+            </div>
+            <div className="prices-bubble">
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+                <div className="price-avail">
+                    <span class="price">Rs. 100.00</span><br/>
+                    <span class="class-seat">Normal</span><br/>
+                    <span class="status">Available</span>
+                </div>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+            <div class="show-time-container" onClick={handleClickToOpen}>
+                <a>07:35 PM</a>
+            </div>
+        </div>
+        
+
+    </div>
+    
       <Footer/>
+   </div>
+   
     </div>
   );
 }

@@ -1,22 +1,21 @@
 
 .movie-details{
-    position: relative;
      width: 100%;
      overflow: hidden;
      padding-bottom: 15px;
      padding-top: 30px;
      background: #333545;
      box-sizing: border-box;
+     align-content: center;
+     padding-left: 5%;
  }
  .movie-details-container{
-   position: relative;
    text-align: left;
    display: inline-block;
-   width: 85%;
+   width: 95%;
    box-sizing: border-box;
    background: #333545;
    color: #999;
-   z-index: 3;
  }
  .movie-name{
    color: #f4f4f4;
@@ -44,6 +43,7 @@
    background: 0 0;
    cursor: pointer;
    font-weight: 400;
+   color: white;
  }
  .movie-name>h1>a:hover{
    text-decoration: underline;
@@ -116,9 +116,12 @@
    margin-left: 10px;
    margin-right: 5px;
  }
- .clock-icon>img{
+ .clock-icon img{
    width: 15px;
  }
+
+
+ /* movie Cast */
  .movie-cast{
    float: right;
    align-items: baseline;
@@ -164,6 +167,7 @@
    display: flex;
    justify-content: left;
    align-items: center;
+   position: relative;
  }
  .slider-container{
    display: flex;
@@ -188,7 +192,8 @@
    color: #666;
    text-transform: uppercase;
    padding:12px;
-   
+   text-align: center;
+   cursor: pointer;
  }
  
  
@@ -204,30 +209,30 @@
      font-size: 12px;
      line-height: 14px;
  }
- .days-container:hover{
-   color: red;
+ .slider ul>li:hover{
  }
  
  
- .link {
+ .links {
      display: flex;
      justify-content: center;
      align-items: center;
      box-sizing: border-box;
      padding: 8px 4px;
      margin: 0 4px;
-   width:150px;
+     width:150px;
    
  }
- .link a {
+
+ .links a {
      text-decoration: none;
      color: #191919;
      /* margin-right: 4px; */
      font-size: 14px;
      font-weight: 600;
-   padding-top: 10px;
-   padding-bottom: 10px;
- 
+     padding-top: 10px;
+     padding-bottom: 10px;
+   
  }
  .links-box{
    margin-left: 12%;
@@ -258,23 +263,22 @@
      height: fit-content;
      min-width: 120px;
      background-color: #fff;
-     top: 54px;
+     top: 50px;
      left: 0px;
      display: none;
      border: 1px solid #cecece;
      border-top: none;
-     z-index: 10;
  }
  
  .dropdown-content a {
      color: rgb(75, 75, 75);
      padding: 15px 20px;
-   padding-right: 60px;
+     padding-right: 60px;
      text-decoration: none;
      display: block;
-   text-align: left;
+     text-align: left;
      font-size: 12px;
-   font-weight: 500;
+     font-weight: 500;
  }
  .dropdown-content a:hover {
      background-color: #d3d3d37a;
@@ -302,10 +306,22 @@
  /* Show detials container */
 
  .show-details{
+   
+    width: 100%;
+    background-color: rgb(242,242,242);
+    padding-top: 10px;
+}
+.show-details-container{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    background-color: white;
+    width:90%;
+    margin-left: 5%;
+    padding-top: 20px;
+    padding-left: 20px;
+    border: 1px solid rgb(219, 219, 219);
 }
+
 .theater-info{
     width:30%;
     display: inline-block;
@@ -314,20 +330,26 @@
     border-radius: 20%;
     border-bottom-left-radius: 110%;
     border-bottom-right-radius: 110%;
-    width:20px;
+    width:15px;
     display: inline-block;
 
 }
 .wishlist-icon:hover{
     background-color: red;
+    cursor: pointer;
 }
 .theater-name{
     width: 290px;
     font-weight: 700;
     color: #333;
     display: inline-block;
-    vertical-align:middle;
+    vertical-align:top;
     margin-left: 10px;
+    font-size: 13px;
+}
+.theater-name:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 .info-icon{
     display: inline-block;
@@ -372,19 +394,7 @@
 .foodbevarage-icon span{
     color: #ffa426;
 }
-.show-time-container{
-    border: 1px solid #999;
-    color: #4abd5d;
-    border-radius: 4px;
-    width: 96px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-}
+
 .show-time{
     width:50%;
     display:flex;
@@ -392,26 +402,44 @@
     padding-top: 10px;
     position: relative;
 }
-
+.show-time-container a{
+    border: 1px solid #999;
+    color: #4abd5d;
+    border-radius: 4px;
+    width: 96px;
+    height: 40px;
+    font-size: 13px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
 .prices-bubble{
     position: absolute;
-    width: 400px;
-    height: 70px;
+    width: 350px;
+    height: 65px;
     text-align: center;
+    display: flex;
+    flex-direction: row;
     background-color: rgb(255, 255, 255);
     border: 1px solid #666;
-    -moz-box-shadow: 1px 1px 1px #888;
-    box-shadow: 1px 1px 1px #888;
+    /* -moz-box-shadow: 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px #888; */
+    bottom: 65px;
     display: none;
+    
 }
 .prices-bubble:after {
     content: ' ';
     position: absolute;
     width: 0;
     height: 0;
-    left: 38px;
-    top: 70px;
-    border: 6px solid;
+    left: 54px;
+    top: 65px;
+    border: 5px solid;
     border-color: #fff transparent transparent #fff;
 }
 
@@ -420,24 +448,45 @@
     position: absolute;
     width: 0;
     height: 0;
-    left: 35px;
-    top: 70px;
-    border: 10px solid;
+    left: 50px;
+    top: 65px;
+    border: 9px solid;
     border-color: rgb(171, 171, 171) transparent transparent #666;
 }
 .show-time-container:hover+.prices-bubble{
     display: block;
 }
+.price-avail{
+    float: left;
+    padding: 10px;
+    line-height: 12px;
+}
 .price-avail>.price{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     color: #666;
 }
 .price-avail>.class-seat{
-    font-size: 11px;
+    font-size: 10px;
     color: #666;
 }
 .price-avail>.status{
-    font-size: 14px;
+    font-size: 13px;
     color:#49ba8e;
+}
+
+
+/* Terms and Condition Dialog Box */
+
+.dialog-title{
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+.dialog-content{
+    font-size: 12px;
+}
+.dialog-content ol li{
+    margin-right: 0;
 }
