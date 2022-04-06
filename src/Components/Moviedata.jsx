@@ -191,7 +191,7 @@ const bookticket =()=>{
 
 <div className="review">
 
-<div style={{width: "45%", border: "1px solid gray" ,padding: "2%" }}>
+<div style={{width: "42%", border: "1px solid gray" ,padding: "2%" }}>
   
   <div style={{display: "flex"}}>
     <div style={{marginRight: "2%"}}>
@@ -201,7 +201,7 @@ const bookticket =()=>{
     <p style={{display: "inline-block"}}>BookMyShow User</p>
     </div>
     <div style={{marginTop: "-12px"}}>
-      <p ><span style={{color: "red"}}>	&#9829;</span> 100%</p>
+      <p ><span style={{color: "red"}}>	&#9829;</span>100%</p>
     </div>
   
   </div>
@@ -220,13 +220,13 @@ We would never expect rajamouli direction,every time something new,it was awesom
 
 
 
-<div style={{width: "45%", border: "1px solid gray" ,padding: "2%" }}>
+<div style={{width: "42%", border: "1px solid gray" ,padding: "2%" }}>
   
   <div style={{display: "flex"}}>
     <div style={{marginRight: "2%"}}>
     <img style={{borderRadius: "50%", width: "30px"}} src="https://in.bmscdn.com/in/synopsis-new/noimguser.jpg" alt="" />
     </div>
-    <div style={{marginTop: "-12px" , marginRight: "45%"}}>
+    <div style={{marginTop: "-12px" , marginRight: "65%"}}>
     <p style={{display: "inline-block"}}> User</p>
     </div>
     <div style={{marginTop: "-12px"}}>
