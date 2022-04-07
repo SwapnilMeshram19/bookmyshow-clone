@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './BookShow.css';
 import Navbar from './Navbar'
 import Footer from './Footer'
+import SeatModal from './SeatModal.js';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaAngleDown } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
@@ -18,13 +19,15 @@ import Button from "@material-ui/core/Button";
 const BookShow= () => {
 
    const [open, setOpen] = React.useState(false);
+   const [modalOpen, setModalOpen] = useState(false);
   
    const handleClickToOpen = () => {
     setOpen(true);
    };
   
    const handleToAccept=()=>{
-
+        setOpen(false);
+        setModalOpen(true);
   }
    const handleToCancle = () => {
     setOpen(false);
@@ -645,8 +648,9 @@ const BookShow= () => {
 
     </div>
           
-      
+    {modalOpen && <SeatModal setOpenModal={setModalOpen} />}
    </div>
+   
    <Footer/>
     </div>
   );
