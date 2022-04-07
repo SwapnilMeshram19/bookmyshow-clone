@@ -1,18 +1,22 @@
 
 .share{
     width: 65%;
+    margin-top: 20px;
 }
-.sharecontact{
+.payment{
+    width: 65%;
+}
+.sharecontact , .morepayment{
     background-color: rgb(236, 86, 86);
   padding: 2px;
   margin-left: 8%;
 
 }
-.sharecontact h3{
+.sharecontact h3 , .morepayment h3{
     margin-left: 30px;
 color: white;
 }
-.address{
+.address {
     padding: 2px;
   margin-left: 8%;
   background-color: white;
@@ -33,4 +37,75 @@ color: white;
     padding-right: 3.5%;
     border-radius: 10px;
     color: white;
+}
+.boxpayment{
+    padding: 2px;
+    margin-left: 8%;
+    background-color: white;
+    
+    display: flex;
+}
+.option div{
+/* width: 40%; */
+height: 50px;
+padding: 2px;
+padding-top: 10px;
+padding-left: 20px;
+background-color: whitesmoke;
+padding-right: 130px;
+border-bottom: 1px solid rgb(214, 207, 207);
+color: gray;
+}
+
+.cartpayment{
+    padding: 2%;
+    /* background-color: whitesmoke; */
+}
+.cl{
+    background-color: rgba(78, 71, 71, 0.292);
+    padding: 2px;
+    border-radius: 10px;
+}
+.cardnumber p{
+    padding-left: 20px;
+}
+.cardnumber input{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.extra{
+    display: flex;
+    
+}
+.expiry{
+    margin-right: 150px;
+margin-left: 20px;
+padding-bottom: 20px;
+}
+.expiry input{
+width: 25px;
+height: 30px;
+margin-left: 2px;
+}
+.CVV{
+    padding-right: 70px;
+}
+.CVV input{
+width: 35px;
+height: 30px;
+
+}
+.paymentbtn button{
+    background-color:  rgb(236, 86, 86);;
+    border: 1px solid  rgb(236, 86, 86);;
+    padding: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+margin-top: 15px;
+border-radius: 10px;
+color: white;
 }
