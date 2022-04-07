@@ -1,0 +1,62 @@
+.modal-background {
+    width: 99%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.551);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0.5%;
+    left: 0.5%;
+  }
+  
+  .modal-container {
+    width: 25%;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+  }
+  
+.done-icon{
+  width:60px;
+  margin: auto;
+  position: absolute;
+  bottom: 85%;
+  left: 43%;
+}
+  
+  .body{
+    padding-top: 30px;
+  }
+  .body span{
+    font-size: 20px;
+    padding-top: 50px;
+    font-weight: 500;
+    color: rgb(236, 86, 86);
+  }
+  .body p{
+    color: rgb(149, 149, 149);
+
+  }
+  
+  
+  .modal-container .ok-button button {
+    width: 40%;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: rgb(236, 86, 86);
+    color: white;
+    border-radius: 18px;
+    font-size: 20px;
+    cursor: pointer;
+    justify-content: center;
+  }
+  
