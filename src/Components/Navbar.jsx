@@ -401,6 +401,9 @@ const Navbar = () => {
             Buzz
           </Link>
           <Link to="/moviedata"/>
+          <Link to='/payment' />
+          <Link to='/summary_page'/>
+
         </div>
         <div>
           <Link className="link" to="">
