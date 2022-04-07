@@ -32,7 +32,7 @@ const getData =()=>{
 }
 const bookticket =()=>{
   console.log("1")
-  neavigate('/summary_page')
+  neavigate('/bookshow')
 }
 
 
