@@ -209,9 +209,9 @@
      font-size: 12px;
      line-height: 14px;
  }
- .slider ul>li:hover{
+ /* .slider ul>li:hover{
  }
- 
+  */
  
  .links {
      display: flex;
@@ -306,10 +306,10 @@
  /* Show detials container */
 
  .show-details{
-   
     width: 100%;
     background-color: rgb(242,242,242);
     padding-top: 10px;
+    padding-bottom: 30px;
 }
 .show-details-container{
     display: flex;
@@ -399,8 +399,8 @@
     width:50%;
     display:flex;
     flex-direction: row;
-    padding-top: 10px;
     position: relative;
+    padding-top: 4px;
 }
 .show-time-container a{
     border: 1px solid #999;

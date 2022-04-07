@@ -1,14 +1,13 @@
 import React from 'react'
 import { useState } from 'react';
+
+// componenets Import
 import './BookShow.css';
 import Navbar from './Navbar'
 import Footer from './Footer'
 import SeatModal from './SeatModal.js';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FaAngleDown } from 'react-icons/fa';
-import { FaChevronLeft } from 'react-icons/fa';
-import { FaChevronRight } from 'react-icons/fa';
 
+//Dialog Import
 import Dialog from "@material-ui/core/Dialog";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
@@ -16,6 +15,14 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import Button from "@material-ui/core/Button";
 
+// favicons imports
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaAngleDown } from 'react-icons/fa';
+import { FaChevronLeft } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
+
+
+// main Function
 const BookShow= () => {
 
    const [open, setOpen] = React.useState(false);
@@ -38,6 +45,8 @@ const BookShow= () => {
    const style=Theme=> ({
 
    });
+
+   //html code 
   return (
     <div className="Container">
         <Navbar/>
@@ -190,6 +199,8 @@ const BookShow= () => {
           </ul>
         </div>
       </div>
+      
+    {/* Show details container */}
       <div class="show-details"> 
        <div className='show-details-container'>
         <div class="theater-info">
@@ -212,10 +223,13 @@ const BookShow= () => {
     
         </div>
         
+
+        {/* Show time Container */}
         <div className="show-time">
             <div className="show-time-container" onClick={handleClickToOpen}>
                     <a>07:35 PM</a>
             </div>
+
             <div className="prices-bubble">
                 <div className="price-avail">
                     <span class="price">Rs. 100.00</span><br/>
@@ -647,7 +661,7 @@ const BookShow= () => {
         
 
     </div>
-          
+             
     {modalOpen && <SeatModal setOpenModal={setModalOpen} />}
    </div>
    
