@@ -7,30 +7,30 @@ function SeatModal({setOpenModal}){
         <div className="modalBackground">
       <div className="modalContainer">
         <div className="titleCloseBtn">
-          <button
+          {/* <button
             onClick={() => {
               setOpenModal(false);
             }}
           >
             X
-          </button>
+          </button> */}
         </div>
         <div className="title">
-          <h1>Are You Sure You Want to Continue?</h1>
+          <h3>How Many Seats?</h3>
         </div>
         <div className="body">
-          <p>The next page looks amazing. Hope you want to go there!</p>
+          <p></p>
         </div>
         <div className="footer">
-          <button
+          {/* <button
             onClick={() => {
               setOpenModal(false);
             }}
             id="cancelBtn"
           >
             Cancel
-          </button>
-          <button>Continue</button>
+          </button> */}
+          <button>Select Seats</button>
         </div>
       </div>
     </div>
