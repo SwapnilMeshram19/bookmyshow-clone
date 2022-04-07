@@ -1,10 +1,12 @@
 
 .share{
-    width: 65%;
+    width: 1000px;
     margin-top: 20px;
+    margin-right: 20px;
 }
 .payment{
-    width: 65%;
+    width: 1000px;
+    margin-right: 20px;
 }
 .sharecontact , .morepayment{
     background-color: rgb(236, 86, 86);
@@ -108,4 +110,16 @@ height: 30px;
 margin-top: 15px;
 border-radius: 10px;
 color: white;
+}
+.two{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.bookingsummery{
+    width: 400px;
+    /* background-color: white; */
+    margin: 20px;
+}
+.bookingsummery img{
+    width: 400px;
 }

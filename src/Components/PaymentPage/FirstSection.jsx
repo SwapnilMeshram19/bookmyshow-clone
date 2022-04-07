@@ -65,6 +65,7 @@ const FirstSection = () => {
 
 <div className='bookingsummery'>
 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYkhh4gYj5JHj1JVKC33H2PkOLg3i1elpoHcdupBQmBVD1k31A" alt="" />
 </div>
 
 
