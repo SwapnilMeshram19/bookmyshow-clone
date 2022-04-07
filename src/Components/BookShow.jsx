@@ -21,9 +21,13 @@ import { FaAngleDown } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FaChevronRight } from 'react-icons/fa';
 
+import { useNavigate } from 'react-router-dom';
+
 
 // main Function
 const BookShow= () => {
+
+   const navigate = useNavigate();
 
    const [open, setOpen] = React.useState(false);
    const [modalOpen, setModalOpen] = useState(false);
@@ -33,8 +37,9 @@ const BookShow= () => {
    };
   
    const handleToAccept=()=>{
-        setOpen(false);
-        setModalOpen(true);
+        // setOpen(false);
+        // setModalOpen(true);
+        navigate('/summary_page');
   }
    const handleToCancle = () => {
     setOpen(false);

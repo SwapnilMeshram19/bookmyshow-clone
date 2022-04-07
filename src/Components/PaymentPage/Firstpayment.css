@@ -1,0 +1,126 @@
+
+.share{
+    width: 1000px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.payment{
+    width: 1000px;
+    margin-right: 20px;
+}
+.sharecontact , .morepayment{
+    background-color: rgb(236, 86, 86);
+  padding: 2px;
+  margin-left: 8%;
+
+}
+.sharecontact h3 , .morepayment h3{
+    margin-left: 30px;
+color: white;
+}
+.address {
+    padding: 2px;
+  margin-left: 8%;
+  background-color: white;
+  padding-bottom: 20px;
+}
+.address input{
+    padding: 1%;
+    /* margin: 20px; */
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.address div{
+    display: inline;
+    margin-left: 60px;
+    background-color: rgb(236, 86, 86);
+    padding: 1.5%;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    border-radius: 10px;
+    color: white;
+}
+.boxpayment{
+    padding: 2px;
+    margin-left: 8%;
+    background-color: white;
+    
+    display: flex;
+}
+.option div{
+/* width: 40%; */
+height: 50px;
+padding: 2px;
+padding-top: 10px;
+padding-left: 20px;
+background-color: whitesmoke;
+padding-right: 130px;
+border-bottom: 1px solid rgb(214, 207, 207);
+color: gray;
+}
+
+.cartpayment{
+    padding: 2%;
+    /* background-color: whitesmoke; */
+}
+.cl{
+    background-color: rgba(78, 71, 71, 0.292);
+    padding: 2px;
+    border-radius: 10px;
+}
+.cardnumber p{
+    padding-left: 20px;
+}
+.cardnumber input{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.extra{
+    display: flex;
+    
+}
+.expiry{
+    margin-right: 150px;
+margin-left: 20px;
+padding-bottom: 20px;
+}
+.expiry input{
+width: 25px;
+height: 30px;
+margin-left: 2px;
+}
+.CVV{
+    padding-right: 70px;
+}
+.CVV input{
+width: 35px;
+height: 30px;
+
+}
+.paymentbtn button{
+    background-color:  rgb(236, 86, 86);;
+    border: 1px solid  rgb(236, 86, 86);;
+    padding: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+margin-top: 15px;
+border-radius: 10px;
+color: white;
+}
+.two{
+    display: flex;
+    /* justify-content: space-between; */
+    margin-bottom: 50px;
+}
+.bookingsummery{
+    width: 400px;
+    /* background-color: white; */
+    margin: 20px;
+}
+.bookingsummery img{
+    width: 400px;
+}
