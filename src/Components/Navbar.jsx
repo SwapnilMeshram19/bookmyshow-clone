@@ -1,14 +1,10 @@
 import React, {useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-// import styles from "../Components/Styling/Navbar.module.css";
 import SearchIcon from "@material-ui/icons/Search";
-// import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import Slide from "@material-ui/core/Slide";
@@ -16,13 +12,9 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-// import clsx from "clsx";
-// import { useReducer } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { cityRequest, storeAuth } from "../Redux/app/actions";
 import Login from "../Components/Homepage/LoginPage";
 
-// 'stats.errorDetails: true'
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
@@ -102,11 +94,6 @@ const Navbar = () => {
     setCityName(name);
   };
 
-//   const dispatch = useDispatch();
-//   React.useEffect(() => {
-//     dispatch(cityRequest(cityName));
-//   }, [cityName]);
-
   const toggleDrawer = (open) => (event) => {
     setState(!state);
   };
@@ -116,7 +103,7 @@ const Navbar = () => {
     setState(false);
   };
   const handleCloseLogin = (number) => {
-    if (+number === 7275584516) {
+    if (+number === 8581935284) {
       setAuth(true);
       alert("Successfully Logged in");
     } else if (+number === 123456789) {
@@ -131,11 +118,7 @@ const Navbar = () => {
     setAction(false);
     setState(false);
   };
-//   React.useEffect(() => {
-//     dispatch(storeAuth(auth));
-//   }, [auth]);
 
-//   console.log(isAuth);
   return (
     <div>
       <div className="navbar">
