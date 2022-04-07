@@ -116,7 +116,7 @@ const Navbar = () => {
     setState(false);
   };
   const handleCloseLogin = (number) => {
-    if (+number === 7275584516) {
+    if (+number === 8581935284) {
       setAuth(true);
       alert("Successfully Logged in");
     } else if (+number === 123456789) {
