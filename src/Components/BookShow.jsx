@@ -5,7 +5,7 @@ import { useState } from 'react';
 import './BookShow.css';
 import Navbar from './Navbar'
 import Footer from './Footer'
-import SeatModal from './SeatModal.js';
+import SeatModal from './SuccessfulModal.js';
 
 //Dialog Import
 import Dialog from "@material-ui/core/Dialog";

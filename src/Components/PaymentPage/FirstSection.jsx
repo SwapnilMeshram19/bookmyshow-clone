@@ -1,7 +1,17 @@
 import React from 'react'
+import { useState } from 'react';
+
 import './Firstpayment.css'
 import Navbar from '../Navbar'
+import SeatModal from '../SuccessfulModal.js'
+
 const FirstSection = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleModel = () => {
+    setModalOpen(true);
+   };
+
   return (
     <div>
       <Navbar />
@@ -55,7 +65,7 @@ const FirstSection = () => {
   </div>
 </div>
 <div className='paymentbtn'>
-<button>MAKE PAYMENT</button>
+<button onClick={handleModel}>MAKE PAYMENT</button>
 </div>
 </div>
 </div>
@@ -72,6 +82,7 @@ const FirstSection = () => {
 
 
 </div>
+{modalOpen && <SeatModal setOpenModal={setModalOpen} />}
     </div>
   )
 }

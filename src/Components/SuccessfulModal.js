@@ -1,18 +1,20 @@
 import React from "react";
-import "./SeatModal.css"
+import "./SuccessfulModal.css"
 
 function SeatModal({setOpenModal}){
     return (
         <div className="modal-background">
       <div className="modal-container">
-        <div className="title">
-          <h3>How Many Seats?</h3>
-        </div>
+        <img class='done-icon' src={require('./Image/done_icon.png')}></img>
         <div className="body">
+          <span>Payment Successful</span>
+          <p>
+            Your booking has been confirmed
+          </p>
         </div>
-        <div className="select-button">
+        <div className="ok-button">
          
-          <button>Select Seats</button>
+          <button>Ok</button>
         </div>
       </div>
     </div>
