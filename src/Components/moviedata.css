@@ -73,3 +73,33 @@ hr{
      display: flex;
      gap: 5%;
  }
+ @media screen and (max-width:1200px) {
+    .upperimg img{
+        position: absolute;
+        top: 150px;
+        left: 70px;
+        width: 245px;
+        border-radius: 20px;
+    
+    }
+    .uppertext{
+        position: absolute;
+        top: 130px;
+        left: 350px;
+    }
+  }
+ @media screen and (max-width:800px) {
+    .upperimg img{
+        position: absolute;
+        top: 150px;
+        left: 50px;
+        width: 240px;
+        border-radius: 20px;
+    
+    }
+    .uppertext{
+        position: absolute;
+        top: 130px;
+        left: 300px;
+    }
+  }

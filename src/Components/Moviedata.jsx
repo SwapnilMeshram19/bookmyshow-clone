@@ -1,10 +1,12 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import Footer from './Footer'
 // import { Movie } from './Movie'
 import './moviedata.css'
 import Navbar from './Navbar'
+import { useNavigate } from 'react-router-dom'
 const Moviedata = () => {
+  const neavigate = useNavigate();
   const [item , setItems] = React.useState([])
   const [copyitem,setCopyItems]=React.useState([])
 
@@ -30,6 +32,7 @@ const getData =()=>{
 }
 const bookticket =()=>{
   console.log("1")
+  neavigate('/bookshow')
 }
 
 

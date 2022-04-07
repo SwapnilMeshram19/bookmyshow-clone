@@ -12,6 +12,9 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import styles from '../Styling/Summery.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import FoodCard from '../SummeryPage/FoodCard';
+import { useNavigate } from 'react-router-dom'
+// import FirstSection from './Components/PaymentPage/FirstSection';
+
 
 // import PaymentsPage from './PaymentsPage';
 // import {handleAddTotalPrice} from "../../Redux/booking_details/actions";
@@ -34,8 +37,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 
 
-
 export const SummaryPage = () => {
+  var navigate=useNavigate();
   const classes = useStyles();
   let foodArray = [1, 2, 3, 4];
   let foodModalOpen = true;
@@ -43,7 +46,10 @@ export const SummaryPage = () => {
   const handleCloseFoodModal = () => {
     foodModalOpen = false;
   }
-
+  const handlebtn= ()=>{
+  navigate('/payment')
+  }
+  
   return (
     <div>
       <Dialog fullScreen open={foodModalOpen} onClose={handleCloseFoodModal} TransitionComponent={Transition}>
@@ -107,7 +113,7 @@ export const SummaryPage = () => {
               <div>Rs 700</div>
             </div>
             <h3 className={styles.ticketType}>Select Ticket Type</h3>
-            <div  className={styles.proceedBtn}>
+            <div  className={styles.proceedBtn} onClick={()=> handlebtn()} >
               <div>Total : Rs 700</div>
               <div> Proceed</div>
             </div>
