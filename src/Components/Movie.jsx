@@ -80,7 +80,7 @@ const handleClick =(posti)=>{
     <div className='container'>
      
        <div >
-         <h2>Filters</h2>
+         <h2 className='vv'>Filters</h2>
        <div className='btn'>
          <p style={{margin: "0px" , marginLeft: "15px" , display: "inline-block" ,marginRight: "120px"} }>Languages</p>
         {/* <button onClick={()=>showAll()}>Show All</button> */}
