@@ -1,7 +1,7 @@
 import React from "react";
 import "./SuccessfulModal.css"
 
-function SeatModal({setOpenModal}){
+function SuccessfulModal({setOpenModal}){
     return (
         <div className="modal-background">
       <div className="modal-container">
@@ -14,11 +14,11 @@ function SeatModal({setOpenModal}){
         </div>
         <div className="ok-button">
          
-          <button>Ok</button>
+        <button>Ok</button>
         </div>
       </div>
     </div>
     );
 }
 
-export default SeatModal;
+export default SuccessfulModal;

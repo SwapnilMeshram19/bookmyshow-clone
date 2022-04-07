@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import './Firstpayment.css'
 import Navbar from '../Navbar'
-import SeatModal from '../SuccessfulModal.js'
+import SuccessfulModal from '../SuccessfulModal.js'
 
 const FirstSection = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -82,7 +82,7 @@ const FirstSection = () => {
 
 
 </div>
-{modalOpen && <SeatModal setOpenModal={setModalOpen} />}
+{modalOpen && <SuccessfulModal setOpenModal={setModalOpen} />}
     </div>
   )
 }

@@ -201,12 +201,27 @@ const BookShow= () => {
               </div>
             </div>
           </li>
+          <li>
+            <div className="links">
+              <a href="#"><span>Hindi 3D</span></a>
+              <FaAngleDown className="down-icons" size="25px"/>
+              <div className="dropdown-content" >
+                <a href="./allDisease.html" target="_blank">Hindi Imax 3D</a>
+                <a href="">Hindi 2D</a>
+                <a href="">Hindi Imax 3D</a>
+              </div>
+            </div>
+          </li>
           </ul>
         </div>
       </div>
       
     {/* Show details container */}
       <div class="show-details"> 
+      <div>
+          <span></span>
+
+      </div>
        <div className='show-details-container'>
         <div class="theater-info">
             <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
