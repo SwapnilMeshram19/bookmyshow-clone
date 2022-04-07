@@ -1,8 +1,10 @@
 import React from 'react'
 import './Firstpayment.css'
+import Navbar from '../Navbar'
 const FirstSection = () => {
   return (
     <div>
+      <Navbar />
       <div className='two'>
         <div>
 

@@ -114,6 +114,7 @@ color: white;
 .two{
     display: flex;
     /* justify-content: space-between; */
+    margin-bottom: 50px;
 }
 .bookingsummery{
     width: 400px;
