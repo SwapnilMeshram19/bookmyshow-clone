@@ -1,59 +1,92 @@
 import React from 'react'
-// import { useSelector } from 'react-redux';
-import styles from '../Styling/PaymentsPage.module.css';
+import { useState } from 'react';
 
+import './Firstpayment.css'
+import Navbar from '../Navbar'
+import SuccessfulModal from '../SuccessfulModal.js'
+// import { useNavigate } from 'react-router-dom';
 
-const SecondSection = () => {
-    // const city = useSelector(state => state.app.city)
-    // const booking_details = useSelector(state => state.booking_details);
+const FirstSection = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+// const navigate = useNavigate();
+  const handleModel = () => {
+    setModalOpen(true);
+// navigate('/')
+   };
 
-    const handleChange = (e) => {
-
-    }
-    return (
+  return (
+    <div>
+      <Navbar />
+      <div className='two'>
         <div>
-            <div className={styles.summeryPart}>
-                <div>Booking Summery</div>
-                {/* <div className={styles.categories}>
-                    <div style={{ textTransform: 'uppercase' }}>{booking_details.cinemas_name}</div>
-                    <div>{booking_details.silver.length + booking_details.platinium.length} Ticket(s)</div>
-                </div> */}
-                <span>AUDI 5</span>
-                {/* <div className={styles.categories}>
-                    <div style={{fontSize:'12px', lineHeight:'25px'}}>Internet handeling fees</div>
-                    <div>Rs 28.00</div>
-                </div> */}
-                <div className={styles.line}></div>
-                <div className={styles.categories}>
-                    <div>Sub total</div>
-                    {/* <div>Rs. {booking_details.total_price}</div> */}
-                </div>
 
-                <div className={styles.charity}>
-                    <div>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <input type="checkbox" onChange={handleChange} />
-                            <img src="https://in.bmscdn.com/webin/common/icons/bookasmile-logo.svg" alt="" />
-                        </div>
-                        <div>Rs 1</div>
-                    </div>
-                    <div style={{ fontSize: '12px', padding: "10px 20px" }}>
-                        <div>Rs. 1 will be added to your transaction as a donation.</div>
-                        <div>Re.1/1 Ticket</div>
-                    </div>
-                </div>
+<div className='share'>
+<div className='sharecontact'><h3>Share your contact details</h3></div>
+<div className='address'>
+    <input type="text" placeholder='Email Address' />
+    <input type="number" placeholder='Mobile number'/>
+    <div>CONTINUE</div>
+</div>
+</div>
 
-                <div style={{ fontSize: '12px', margin: '0 30px', fontWeight: '600' }}>Your current State is <a href="">city</a></div>
-                <div className={styles.total}>
-                    <div>Amount Payable</div>
-                    {/* <div>Rs. {booking_details.total_price}</div> */}
-                </div>
-                {/* <h3 className={styles.ticketType}>Select Ticket Type</h3> */}
 
-                <div className={styles.cancellation_policy}>You can cancel the tickets 20 min(s) before the show. Refunds will be done according to <a href="">Cancellation Policy</a></div>
-            </div>
-        </div>
-    )
+
+<div className="payment">
+<div className="morepayment"><h3>More Payment options</h3></div>
+<div className='boxpayment'>
+<div className="option">
+  <div>Quick pay</div>
+  <div style={{backgroundColor: "white"}}>Credit/Debit card</div>
+  <div>Net Banking</div>
+  <div>Mobile wallet</div>
+  <div>Gift Voucher</div>
+  <div>UPI</div>
+  <div>Redeem Points</div>
+  <div>Credit Voucher</div>
+
+</div>
+<div className="cartpayment">
+<p>Enter your card details</p>
+<div className='cl'>
+  
+  <div className='cardnumber'>
+<p>Card Number</p>
+<input type="number"placeholder='2222 3333 4444 5555'/>
+<input type="text" placeholder='Vikalp Varshney' />
+</div>
+<div className='extra'>
+<div className='expiry'>
+<p style={{margin: "0px", marginBottom: "4px" }}>Expiry</p>
+  <input type="number" placeholder='06' />
+  <input type="number" placeholder='22' />
+</div>
+<div className='CVV'>
+<p style={{margin: "0px", marginBottom: "4px" }}>CVV</p>
+<input type="number" placeholder='989' />
+</div>
+  </div>
+</div>
+<div className='paymentbtn'>
+<button onClick={handleModel}>MAKE PAYMENT</button>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+<div className='bookingsummery'>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYkhh4gYj5JHj1JVKC33H2PkOLg3i1elpoHcdupBQmBVD1k31A" alt="" />
+</div>
+
+
+</div>
+{modalOpen && <SuccessfulModal setOpenModal={setModalOpen} />}
+    </div>
+  )
 }
 
-export default SecondSection
+export default FirstSection
