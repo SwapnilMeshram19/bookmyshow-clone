@@ -1,7 +1,11 @@
 import React from "react";
 import "./SuccessfulModal.css"
-
+import { useNavigate } from 'react-router-dom';
 function SuccessfulModal({setOpenModal}){
+  const naviagate = useNavigate();
+  const handleclick =()=>{
+    naviagate('/')
+  }
     return (
         <div className="modal-background">
       <div className="modal-container">
@@ -14,7 +18,7 @@ function SuccessfulModal({setOpenModal}){
         </div>
         <div className="ok-button">
          
-        <button>Ok</button>
+        <button onClick={()=> handleclick()}>Ok</button>
         </div>
       </div>
     </div>
