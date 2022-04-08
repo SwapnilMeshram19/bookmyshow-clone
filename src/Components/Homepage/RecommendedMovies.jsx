@@ -39,7 +39,7 @@ const Banner = styles.div`
         width: 100%;
         height: 100%
     }
-    @media screen and (max-width: 720px){
+    @media screen and (max-width: 768px){
         display: none
     }
 `
@@ -144,7 +144,7 @@ export const RecommendedMovies = () => {
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 2,
+            items: 3,
             slidesToSlide: 2
         },
         mobile: {
@@ -158,7 +158,7 @@ export const RecommendedMovies = () => {
             <Div >
                 <div className="contentText">
                     <h2>Recommended Movies</h2>
-                    <Link to="/ncr/movies" className="link">See all <RiArrowRightSLine /></Link>
+                    <Link to="/movie" className="link">See all <RiArrowRightSLine /></Link>
                 </div>
                 <div className="entertainment_container">
                     <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]} autoPlay={false} >

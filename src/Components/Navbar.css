@@ -152,3 +152,10 @@
 .signBtn>p{
 	margin-top: -2px;
 }
+
+
+@media screen and (max-width: 720px) {
+	.navbarDiv {
+		display: none;
+	}
+}

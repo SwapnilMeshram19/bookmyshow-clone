@@ -143,7 +143,7 @@ export const LatestEvents = () => {
             <Div >
                 <div className="contentText">
                     <h2>Latest Events</h2>
-                    <Link to="/ncr/movies" className="link">See all <RiArrowRightSLine /></Link>
+                    <Link to="/movie" className="link">See all <RiArrowRightSLine /></Link>
                 </div>
                 <div className="entertainment_container">
                     <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]} autoPlay={false} >
