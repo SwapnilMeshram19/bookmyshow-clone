@@ -20,8 +20,10 @@ const Div = styles.div`
         cursor: pointer;
     }
 
-    @media screen and (max-width: 720px){
-        display: none
+    @media screen and (max-width: 768px){
+        .contentText span {
+            display: none;
+        }
     }
 
     .contentText h2 {

@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import SearchIcon from "@material-ui/icons/Search";
@@ -14,7 +14,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import { useDispatch, useSelector } from "react-redux";
 import Login from "../Components/Homepage/LoginPage";
-
+import {storeAuth} from "../Redux/app/actions"
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
@@ -119,8 +119,13 @@ const Navbar = () => {
     setState(false);
   };
 
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    dispatch(storeAuth(auth));
+  }, [auth]);
+
   return (
-    <div>
+    <div className="navbarDiv">
       <div className="navbar">
         <div style={{ display: "flex", alignItems: "center", width: "65%" }}>
           <Link className="link" to="/">
@@ -150,8 +155,7 @@ const Navbar = () => {
           </div>
           {!isAuth && (
             <button onClick={handleSignIn} className="signBtn">
-                <p>Sign In</p>
-              
+              <p>Sign In</p>
             </button>
           )}
           <Login action={action} handleCloseLogin={handleCloseLogin} />
@@ -362,43 +366,43 @@ const Navbar = () => {
           <Link className="link" to="/movie">
             Movies
           </Link>
-          <Link className="link" to="/">
+          <Link className="link" to="/movie">
             Stream
           </Link>
-          <Link className="link" to="/">
+          <Link className="link" to="/movie">
             Events
           </Link>
-          <Link className="link" to="/">
+          <Link className="link" to="/movie">
             Plays
           </Link>
-          <Link className="link" to="">
+          <Link className="link" to="/movie">
             Sports
           </Link>
-          <Link className="link" to="">
+          <Link className="link" to="/movie">
             Activities
           </Link>
-          <Link className="link" to="">
+          <Link className="link" to="/movie">
             Fanhood
           </Link>
-          <Link className="link" to="">
+          <Link className="link" to="/movie">
             Buzz
           </Link>
-          <Link to="/moviedata"/>
-          <Link to='/payment' />
-          <Link to='/summary_page'/>
-          <Link to='/bookshow'/>
+          <Link to="/moviedata" />
+          <Link to="/payment" />
+          <Link to="/summary_page" />
+          <Link to="/bookshow" />
         </div>
         <div>
-          <Link className="link" to="">
+          <Link className="link" to="/movie">
             Listyourshow
           </Link>
-          <Link className="link" to="">
+          <Link className="link" to="/movie">
             Corporates
           </Link>
-          <Link className="link" to="">
+          <Link className="link" to="/movie">
             Offers
           </Link>
-          <Link className="link" to="">
+          <Link className="link" to="/movie">
             Gift Cards
           </Link>
         </div>
