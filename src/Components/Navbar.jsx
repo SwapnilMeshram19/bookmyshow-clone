@@ -345,7 +345,7 @@ const Navbar = () => {
             }}
           >
             {location.map((loc) => (
-              <div style={{ margin: "2px" }}>
+              <div style={{ margin: "2px", cursor: "pointer" }}>
                 <img
                   onClick={() => handleLocation(loc.name)}
                   src={loc.link}
