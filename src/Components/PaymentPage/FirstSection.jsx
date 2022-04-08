@@ -1,7 +1,19 @@
 import React from 'react'
+import { useState } from 'react';
+
 import './Firstpayment.css'
 import Navbar from '../Navbar'
+import SuccessfulModal from '../SuccessfulModal.js'
+// import { useNavigate } from 'react-router-dom';
+
 const FirstSection = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+// const navigate = useNavigate();
+  const handleModel = () => {
+    setModalOpen(true);
+
+   };
+
   return (
     <div>
       <Navbar />
@@ -38,24 +50,24 @@ const FirstSection = () => {
 <div className='cl'>
   
   <div className='cardnumber'>
-<p>Card Number</p>
+<p style={{color: "gray"}}>Card Number</p>
 <input type="number"placeholder='2222 3333 4444 5555'/>
 <input type="text" placeholder='Vikalp Varshney' />
 </div>
 <div className='extra'>
 <div className='expiry'>
-<p style={{margin: "0px", marginBottom: "4px" }}>Expiry</p>
+<p style={{margin: "0px", marginBottom: "4px",color: "gray" }}>Expiry</p>
   <input type="number" placeholder='06' />
   <input type="number" placeholder='22' />
 </div>
 <div className='CVV'>
-<p style={{margin: "0px", marginBottom: "4px" }}>CVV</p>
+<p style={{margin: "0px", marginBottom: "4px" ,color: "gray"}}>CVV</p>
 <input type="number" placeholder='989' />
 </div>
   </div>
 </div>
 <div className='paymentbtn'>
-<button>MAKE PAYMENT</button>
+<button onClick={handleModel}>MAKE PAYMENT</button>
 </div>
 </div>
 </div>
@@ -72,6 +84,7 @@ const FirstSection = () => {
 
 
 </div>
+{modalOpen && <SuccessfulModal setOpenModal={setModalOpen} />}
     </div>
   )
 }
