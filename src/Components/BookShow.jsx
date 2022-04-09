@@ -195,7 +195,7 @@ const BookShow= () => {
               <a href="#"><span>Hindi 3D</span></a>
               <FaAngleDown className="down-icons" size="25px"/>
               <div className="dropdown-content" >
-                <a href="./allDisease.html" target="_blank">Hindi Imax 3D</a>
+                <a href="" target="_blank">Hindi Imax 3D</a>
                 <a href="">Hindi 2D</a>
                 <a href="">Hindi Imax 3D</a>
               </div>
@@ -203,12 +203,14 @@ const BookShow= () => {
           </li>
           <li>
             <div className="links">
-              <a href="#"><span>Hindi 3D</span></a>
+              <a href="#"><span>Regions</span></a>
               <FaAngleDown className="down-icons" size="25px"/>
               <div className="dropdown-content" >
-                <a href="./allDisease.html" target="_blank">Hindi Imax 3D</a>
-                <a href="">Hindi 2D</a>
-                <a href="">Hindi Imax 3D</a>
+                <a href="" target="_blank">Navi Mumbai</a>
+                <a href="">Mumbai Western</a>
+                <a href="">Mumbai South and Central</a>
+                <a href="">Thane</a>
+                <a href=''>Kalyan</a>
               </div>
             </div>
           </li>
@@ -285,7 +287,7 @@ const BookShow= () => {
     <div className='show-details-container'>
         <div class="theater-info">
             <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
-            <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
+            <span class="theater-name">INOX: Neelyog, Ghatkopar (E)</span>
             <span class="info-icon">
                 <img src="https://in.bmscdn.com/moviemode/cinemaphotoshowcase/safety_first.png"/>
                 <span>INFO</span>
@@ -342,7 +344,7 @@ const BookShow= () => {
     <div className='show-details-container'>
         <div class="theater-info">
             <img class="wishlist-icon"src={require('./Image/heart_blank.png')}/>
-            <span class="theater-name">Cinepolis: Fun Republic Mall, Andheri (W) </span>
+            <span class="theater-name">Ashok Anil Multiplex, Miraj Cinemas: Ulhasnagar</span>
             <span class="info-icon">
                 <img src="https://in.bmscdn.com/moviemode/cinemaphotoshowcase/safety_first.png"/>
                 <span>INFO</span>
