@@ -16,7 +16,8 @@ const Moviedata = () => {
 },[])
 
 const getData =()=>{
-    fetch(`http://localhost:3004/posts/${id}`)
+  //https://datajsonaaaasd.herokuapp.com/posts
+  fetch(`https://datajsonaaaasd.herokuapp.com/posts/${id}`)
     .then((res)=>res.json())
     .then((res)=>{
         // console.log(res)
