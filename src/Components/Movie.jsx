@@ -11,7 +11,7 @@ const navigate = useNavigate();
     React.useEffect(()=>{
         getData()
     },[])
-
+//.
     const getData =()=>{
         fetch(`http://localhost:3004/posts`)
         .then((res)=>res.json())
