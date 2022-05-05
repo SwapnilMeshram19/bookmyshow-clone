@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { useNavigate } from 'react-router-dom'
 import SearchIcon from "@material-ui/icons/Search";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -83,7 +84,7 @@ const Navbar = () => {
   const [auth, setAuth] = React.useState(false);
   const [action, setAction] = React.useState(false);
   const isAuth = useSelector((state) => state.app.isAuth);
-
+  const navigate = useNavigate();
   const [item, setItems] = React.useState([])
   const [copyitem, setCopyItems] = React.useState([])
 
@@ -147,6 +148,12 @@ const Navbar = () => {
     dispatch(storeAuth(auth));
   }, [auth]);
 
+  const handleClick = () => {
+    
+    navigate(`/moviedata/1`)
+  }
+
+
   return (
     <div className="navbarDiv">
       <div className="navbar">
@@ -171,12 +178,12 @@ const Navbar = () => {
               onChange={(e) => getData(e.target.value)}
             />
 
-            <div className="search2">
+            <div className="search2" onClick={() => handleClick()}>
               {
                 copyitem?.map(post => {
                   return (
                     <div>
-                      <p style={{ color:"black",marginLeft:"20px" }}>{post.Title} </p>
+                      <p style={{ color:"black",marginLeft:"20px" }} >{post.Title} </p>
                       <hr style={{width: "100%",color: "white"}}/>
                     </div>
                   )
