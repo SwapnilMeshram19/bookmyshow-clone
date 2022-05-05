@@ -22,15 +22,15 @@ function App() {
   return (
     <div className="App">
       {/* <BookShow/> */}
-         {/* <Routes>
+         <Routes>
             <Route path="/" exact element={<Homepage/>} />
             <Route path='/movie' exact element={<Movie />} />
             <Route path='/moviedata/:id' exact element={<Moviedata />}/>
             <Route path='/payment' element={<FirstSection />}/>
             <Route path='/summary_page' exact element={<SummaryPage/>}/> 
             <Route path='/bookshow' exact element={<BookShow/>}/>
-         </Routes> */}
-<Debounce/>
+         </Routes>
+{/* <Debounce/> */}
          {/* <Seating/> */}
 
     </div>
