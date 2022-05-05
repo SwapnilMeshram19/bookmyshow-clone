@@ -87,23 +87,20 @@ const Navbar = () => {
   const [item, setItems] = React.useState([])
   const [copyitem, setCopyItems] = React.useState([])
 
-  React.useEffect(() => {
-    getData()
-  }, [])
+ 
   //.
   const getData = debounce((name) => {
-    // https://datajsonaaaasd.herokuapp.com/posts?title=${name}
     fetch(`http://www.omdbapi.com/?apikey=5ce07a9f&s=${name}`)
       .then((res) => res.json())
       .then((res) => {
 
-        setItems(res.Search);
+        // setItems(res.Search);
         setCopyItems(res.Search);
 
       }).catch((err) => {
         console.log(err)
       })
-  }, 1000)
+  }, 500)
 
 
 
@@ -174,19 +171,19 @@ const Navbar = () => {
               onChange={(e) => getData(e.target.value)}
             />
 
-            {/* <div >
+            <div className="search2">
               {
                 copyitem?.map(post => {
                   return (
-                    <div key={post.imdbID}  >
-                      <p style={{ color:"red" }}>{post.Title} </p>
-                      <hr />
+                    <div>
+                      <p style={{ color:"black",marginLeft:"20px" }}>{post.Title} </p>
+                      <hr style={{width: "100%",color: "white"}}/>
                     </div>
                   )
                 })
               }
 
-            </div> */}
+            </div>
 
            
 
