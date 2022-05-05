@@ -14,7 +14,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import { useDispatch, useSelector } from "react-redux";
 import Login from "../Components/Homepage/LoginPage";
-import {storeAuth} from "../Redux/app/actions"
+import { storeAuth } from "../Redux/app/actions"
+import { debounce } from "lodash";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
@@ -82,6 +83,31 @@ const Navbar = () => {
   const [auth, setAuth] = React.useState(false);
   const [action, setAction] = React.useState(false);
   const isAuth = useSelector((state) => state.app.isAuth);
+
+  const [item, setItems] = React.useState([])
+  const [copyitem, setCopyItems] = React.useState([])
+
+  React.useEffect(() => {
+    getData()
+  }, [])
+  //.
+  const getData = debounce((name) => {
+    // https://datajsonaaaasd.herokuapp.com/posts?title=${name}
+    fetch(`http://www.omdbapi.com/?apikey=5ce07a9f&s=${name}`)
+      .then((res) => res.json())
+      .then((res) => {
+
+        setItems(res.Search);
+        setCopyItems(res.Search);
+
+      }).catch((err) => {
+        console.log(err)
+      })
+  }, 1000)
+
+
+
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -137,14 +163,40 @@ const Navbar = () => {
               ></image>
             </svg>
           </Link>
+
+
           <div className="searchBar">
             <SearchIcon />
+
             <input
               type="text"
               placeholder="Search for Movies, Events, Plays, Sports and Activities"
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => getData(e.target.value)}
             />
+
+            {/* <div >
+              {
+                copyitem?.map(post => {
+                  return (
+                    <div key={post.imdbID}  >
+                      <p style={{ color:"red" }}>{post.Title} </p>
+                      <hr />
+                    </div>
+                  )
+                })
+              }
+
+            </div> */}
+
+           
+
           </div>
+
+
+
+
+
+
         </div>
         <div
           style={{ display: "flex", alignItems: "center", fontSize: "17px" }}
