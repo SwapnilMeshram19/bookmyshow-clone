@@ -15,11 +15,11 @@ const Moviedata = () => {
     getData()
   }, [])
 
-  const getData = () => {
-    //https://datajsonaaaasd.herokuapp.com/posts
-    fetch(`https://datajsonaaaasd.herokuapp.com/posts/${id}`)
-      .then((res) => res.json())
-      .then((res) => {
+
+const getData =()=>{
+    fetch(`https://bookmyshow-database.herokuapp.com/posts/${id}`)
+    .then((res)=>res.json())
+    .then((res)=>{
 
         setItems(res);
         setCopyItems(res);

@@ -13,7 +13,8 @@ const navigate = useNavigate();
     },[])
 //.
     const getData =()=>{
-      fetch(`https://datajsonaaaasd.herokuapp.com/posts`)
+        fetch(`https://bookmyshow-database.herokuapp.com/posts`)
+
         .then((res)=>res.json())
         .then((res)=>{
             // console.log(res)
