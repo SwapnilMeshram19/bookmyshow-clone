@@ -12,8 +12,10 @@ import { Routes,Route } from 'react-router-dom';
 import {Movie} from './Components/Movie'
 import { Moviedata } from './Components/Moviedata';
 import FirstSection from './Components/PaymentPage/FirstSection';
-
+import {Debounce} from './Components/debounce'
 import {SummaryPage} from "./Components/SummeryPage/SummeryPage";
+
+// import Seating from './Components/Seating';
 function App() {
 
 
@@ -28,6 +30,8 @@ function App() {
             <Route path='/summary_page' exact element={<SummaryPage/>}/> 
             <Route path='/bookshow' exact element={<BookShow/>}/>
          </Routes>
+{/* <Debounce/> */}
+         {/* <Seating/> */}
 
     </div>
   );

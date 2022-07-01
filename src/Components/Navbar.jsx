@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { useNavigate } from 'react-router-dom'
 import SearchIcon from "@material-ui/icons/Search";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -14,7 +15,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import { useDispatch, useSelector } from "react-redux";
 import Login from "../Components/Homepage/LoginPage";
-import {storeAuth} from "../Redux/app/actions"
+import { storeAuth } from "../Redux/app/actions"
+import { debounce } from "lodash";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
@@ -82,6 +84,28 @@ const Navbar = () => {
   const [auth, setAuth] = React.useState(false);
   const [action, setAction] = React.useState(false);
   const isAuth = useSelector((state) => state.app.isAuth);
+  const navigate = useNavigate();
+  const [item, setItems] = React.useState([])
+  const [copyitem, setCopyItems] = React.useState([])
+
+ 
+  //.
+  const getData = debounce((name) => {
+    fetch(`http://www.omdbapi.com/?apikey=5ce07a9f&s=${name}`)
+      .then((res) => res.json())
+      .then((res) => {
+
+        // setItems(res.Search);
+        setCopyItems(res.Search);
+
+      }).catch((err) => {
+        console.log(err)
+      })
+  }, 500)
+
+
+
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -124,6 +148,12 @@ const Navbar = () => {
     dispatch(storeAuth(auth));
   }, [auth]);
 
+  const handleClick = () => {
+    
+    navigate(`/moviedata/1`)
+  }
+
+
   return (
     <div className="navbarDiv">
       <div className="navbar">
@@ -137,14 +167,40 @@ const Navbar = () => {
               ></image>
             </svg>
           </Link>
+
+
           <div className="searchBar">
             <SearchIcon />
+
             <input
               type="text"
               placeholder="Search for Movies, Events, Plays, Sports and Activities"
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => getData(e.target.value)}
             />
+
+            <div className="search2" onClick={() => handleClick()}>
+              {
+                copyitem?.map(post => {
+                  return (
+                    <div>
+                      <p style={{ color:"black",marginLeft:"20px" }} >{post.Title} </p>
+                      <hr style={{width: "100%",color: "white"}}/>
+                    </div>
+                  )
+                })
+              }
+
+            </div>
+
+           
+
           </div>
+
+
+
+
+
+
         </div>
         <div
           style={{ display: "flex", alignItems: "center", fontSize: "17px" }}

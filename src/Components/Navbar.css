@@ -9,6 +9,7 @@
 	/* width: 100%; */
 	padding: 0 80px;
 }
+
 .link {
 	text-decoration: none;
 	color: white;
@@ -16,39 +17,60 @@
 	opacity: .8;
 	font-weight: 400;
 }
+
 .link:hover {
 	opacity: 1;
 }
+
 .logo {
 	width: 130px;
 	margin-left: -10px;
 }
+
 .searchBar {
 	background: white;
 	width: 60%;
 	height: 40px;
 	display: flex;
 	align-items: center;
+	/* margin-bottom: 300px; */
 	border-radius: 5px;
 	padding: 0 10px;
 	margin: 0 20px;
 }
+
+.search2 {
+	width: 550px;
+	
+	background-color: rgba(249, 249, 249, 0.888);
+	position: absolute;
+	top: 56px;
+	left: 270px;
+	z-index: 1;
+
+}
+
 .searchBar input {
 	border: none;
 	background: none;
+	position: relative;
+	/* margin-bottom: 300px; */
 	margin: 0 10px;
 	outline: none;
 	width: 70%;
 	height: 30px;
 }
+
 ::placeholder {
 	color: #9b9b9b;
 }
+
 .Dialog {
 	margin: auto;
 	width: 90%;
 	text-align: center;
 }
+
 .location {
 	display: flex;
 	justify-content: center;
@@ -56,25 +78,30 @@
 	cursor: pointer;
 	margin: 0 20px;
 }
+
 .location_content {
 	display: flex;
 	align-items: center;
 	border: 1px solid #eee;
 	padding: 0 10px;
 }
+
 .location_content input {
 	margin: 0 20px;
 }
+
 .Dialog img {
 	width: 80px;
 	margin: 10px;
 }
+
 .profile {
 	display: flex;
 	align-items: center;
 	color: white;
 	cursor: pointer;
 }
+
 .profile div {
 	margin: 0 10px;
 }
@@ -99,7 +126,8 @@
 	justify-content: space-between;
 	color: white;
 }
-.drawer > div:first-child {
+
+.drawer>div:first-child {
 	font-size: 23px;
 	font-weight: 600;
 }
@@ -112,14 +140,17 @@
 	padding: 0 20px;
 	font-size: 18px;
 }
+
 .sideber_content span {
 	margin-left: 20px;
 }
+
 .sideber_content div:hover {
 	background: #eee;
 }
-.signout_button {
-}
+
+.signout_button {}
+
 .signout_button button {
 	width: 105%;
 	height: 50px;
@@ -146,10 +177,11 @@
 	align-items: center;
 	outline: none;
 	cursor: pointer;
-	
-	
+
+
 }
-.signBtn>p{
+
+.signBtn>p {
 	margin-top: -2px;
 }
 

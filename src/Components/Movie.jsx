@@ -11,9 +11,10 @@ const navigate = useNavigate();
     React.useEffect(()=>{
         getData()
     },[])
-
+//.
     const getData =()=>{
         fetch(`https://bookmyshow-database.herokuapp.com/posts`)
+
         .then((res)=>res.json())
         .then((res)=>{
             // console.log(res)
